@@ -179,6 +179,11 @@ elements.startBtn.addEventListener('click', startGame);
 elements.shuffleBtn.addEventListener('click', shufflePuzzle);
 elements.giveUpBtn.addEventListener('click', showGiveUpModal);
 elements.playAgainBtn.addEventListener('click', () => {
+    // 背景エフェクトを停止
+    if (backgroundEffect) {
+        backgroundEffect.stop();
+    }
+    
     // スタート画面に戻る
     showScreen('start');
     // プレビューアイコンを再開
@@ -205,6 +210,12 @@ document.addEventListener('keydown', (e) => {
 async function startGame() {
     // プレビューアイコンを停止
     stopPreviewIcons();
+    
+    // 背景エフェクトを開始
+    if (backgroundEffect) {
+        backgroundEffect.setIntensity('medium');
+        backgroundEffect.start();
+    }
     
     // AWSサービスデータが読み込まれていない場合は読み込む
     if (awsServices.length === 0) {
@@ -275,7 +286,19 @@ function renderPuzzle() {
             const col = puzzleGrid[i] % 3;
             piece.style.backgroundImage = `url(${currentService.image})`;
             piece.style.backgroundPosition = `-${col * 120}px -${row * 120}px`;
-            piece.addEventListener('click', () => movePiece(i));
+            
+            // イベントリスナーを追加（タッチとクリック両方に対応）
+            piece.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                movePiece(i);
+            });
+            
+            piece.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                movePiece(i);
+            });
         }
         
         elements.puzzleGrid.appendChild(piece);
@@ -285,6 +308,10 @@ function renderPuzzle() {
 // ピース移動
 function movePiece(position) {
     if (!isGameActive) return;
+    
+    // イベントの伝播を防ぐ
+    event.preventDefault();
+    event.stopPropagation();
     
     const canMove = isAdjacentToEmpty(position);
     if (canMove) {
@@ -513,7 +540,10 @@ function resetToStart() {
 }
 
 // ページ読み込み時にAWSサービスデータを事前読み込み
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    // 背景エフェクトを初期化
+    await initBackgroundEffect();
+    
     // プレビューアイコンを表示状態にする（初期はスタート画面なので）
     const previewIcons = document.getElementById('preview-icons');
     previewIcons.classList.remove('hidden');

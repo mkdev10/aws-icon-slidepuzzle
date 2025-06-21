@@ -7,10 +7,34 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #232F3E, #FF9900);
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 背景エフェクト用のスタイル */
+#background-effect-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -10;
+    overflow: hidden;
+}
+
+#background-effect-container img {
+    position: absolute;
+    filter: grayscale(20%) brightness(0.8);
+    will-change: transform, top;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    pointer-events: none;
 }
 
 .container {
@@ -21,6 +45,8 @@ body {
     max-width: 600px;
     width: 90%;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 h1 {
@@ -172,6 +198,14 @@ h2 {
     font-weight: bold;
     color: #666;
     background-color: #f8f9fa;
+    position: relative;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .puzzle-piece:hover {
