@@ -6,6 +6,58 @@ function isMobileDevice() {
     return window.innerWidth <= 480 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
+// SVGをData URLに変換する関数
+async function svgToDataUrl(svgUrl) {
+    try {
+        const response = await fetch(svgUrl);
+        const svgText = await response.text();
+        const blob = new Blob([svgText], { type: 'image/svg+xml' });
+        return URL.createObjectURL(blob);
+    } catch (error) {
+        console.warn('SVG変換エラー:', error);
+        return svgUrl; // フォールバック
+    }
+}
+
+// 画像をCanvasに描画してパズルピースを作成する関数
+function createPuzzlePiece(imageUrl, row, col, pieceSize, callback) {
+    const canvas = document.createElement('canvas');
+    canvas.width = pieceSize;
+    canvas.height = pieceSize;
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+    
+    img.onload = function() {
+        // 元画像のサイズを取得
+        const imgWidth = img.naturalWidth || img.width;
+        const imgHeight = img.naturalHeight || img.height;
+        
+        // パズルピースのサイズを計算
+        const pieceWidth = imgWidth / 3;
+        const pieceHeight = imgHeight / 3;
+        
+        // 該当部分を切り取って描画
+        ctx.drawImage(
+            img,
+            col * pieceWidth, row * pieceHeight, pieceWidth, pieceHeight,
+            0, 0, pieceSize, pieceSize
+        );
+        
+        callback(canvas, null);
+    };
+    
+    img.onerror = function() {
+        callback(null, 'Image load error');
+    };
+    
+    img.crossOrigin = 'anonymous';
+    img.src = imageUrl;
+}
+
 // プレビューアイコン関連の変数
 let previewInterval = null;
 let currentPreviewIndex = 0;
@@ -48,8 +100,31 @@ function initializeFirstIcons() {
     for (let i = 0; i < 3; i++) {
         if (i < awsServices.length) {
             const service = awsServices[i];
-            icons[i].src = service.image;
             icons[i].alt = service.name;
+            
+            // Safari対応：SVGをData URLとして読み込み
+            if (service.image.endsWith('.svg')) {
+                fetch(service.image)
+                    .then(response => response.text())
+                    .then(svgText => {
+                        if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                            svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                        }
+                        const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                        const url = URL.createObjectURL(blob);
+                        icons[i].src = url;
+                        
+                        icons[i].onload = function() {
+                            URL.revokeObjectURL(url);
+                        };
+                    })
+                    .catch(error => {
+                        console.warn('プレビューアイコンSVG fetch エラー:', error);
+                        icons[i].src = service.image;
+                    });
+            } else {
+                icons[i].src = service.image;
+            }
             
             // エラーハンドリング
             icons[i].onerror = function() {
@@ -93,8 +168,31 @@ function updateSinglePreviewIcon() {
     setTimeout(() => {
         // 新しいアイコンを設定
         const service = awsServices[currentPreviewIndex % awsServices.length];
-        targetIcon.src = service.image;
         targetIcon.alt = service.name;
+        
+        // Safari対応：SVGをData URLとして読み込み
+        if (service.image.endsWith('.svg')) {
+            fetch(service.image)
+                .then(response => response.text())
+                .then(svgText => {
+                    if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                        svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                    }
+                    const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    targetIcon.src = url;
+                    
+                    targetIcon.onload = function() {
+                        URL.revokeObjectURL(url);
+                    };
+                })
+                .catch(error => {
+                    console.warn('プレビューアイコン更新SVG fetch エラー:', error);
+                    targetIcon.src = service.image;
+                });
+        } else {
+            targetIcon.src = service.image;
+        }
         
         // エラーハンドリング
         targetIcon.onerror = function() {
@@ -314,55 +412,72 @@ function renderPuzzle() {
         } else {
             piece.classList.remove('empty');
             piece.textContent = '';
+            piece.innerHTML = '';
             
-            // 既存のimg要素を削除
-            const existingImg = piece.querySelector('img');
-            if (existingImg) {
-                existingImg.remove();
+            const row = Math.floor(puzzleGrid[i] / 3);
+            const col = puzzleGrid[i] % 3;
+            const isMobile = isMobileDevice();
+            const pieceSize = isMobile ? 80 : 120;
+            
+            // 画像要素を作成
+            const img = document.createElement('img');
+            
+            // Safari対応：SVGをData URLとして読み込み
+            if (currentService.image.endsWith('.svg')) {
+                fetch(currentService.image)
+                    .then(response => response.text())
+                    .then(svgText => {
+                        // SVGにwidth/heightが明示的に設定されていない場合は追加
+                        if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                            svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                        }
+                        const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                        const url = URL.createObjectURL(blob);
+                        img.src = url;
+                        
+                        // メモリリークを防ぐため、使用後にURLを解放
+                        img.onload = function() {
+                            URL.revokeObjectURL(url);
+                            piece.style.backgroundColor = '#f8f9fa';
+                        };
+                    })
+                    .catch(error => {
+                        console.warn('SVG fetch エラー:', error);
+                        img.src = currentService.image; // フォールバック
+                    });
+            } else {
+                img.src = currentService.image;
             }
             
-            // 新しいimg要素を作成
-            const img = document.createElement('img');
-            img.src = currentService.image;
             img.alt = currentService.name;
+            img.style.width = (pieceSize * 3) + 'px';
+            img.style.height = (pieceSize * 3) + 'px';
+            img.style.objectFit = 'contain';
+            img.style.position = 'absolute';
+            img.style.top = (-row * pieceSize) + 'px';
+            img.style.left = (-col * pieceSize) + 'px';
             img.style.pointerEvents = 'none';
             img.style.userSelect = 'none';
             img.style.webkitUserSelect = 'none';
             img.style.webkitUserDrag = 'none';
-            img.style.webkitTouchCallout = 'none';
             
-            // Safari対応：SVG読み込みエラーハンドリング
+            // エラーハンドリング
             img.onerror = function() {
                 console.warn('SVG読み込みエラー:', currentService.image);
-                // フォールバック：背景色で表示
+                piece.innerHTML = '';
                 piece.style.backgroundColor = '#e9ecef';
-                piece.textContent = currentService.name.substring(0, 3);
-                piece.style.fontSize = '12px';
+                piece.style.display = 'flex';
+                piece.style.alignItems = 'center';
+                piece.style.justifyContent = 'center';
+                piece.style.fontSize = isMobile ? '10px' : '12px';
                 piece.style.color = '#666';
+                piece.textContent = currentService.name.substring(0, 3);
             };
             
             img.onload = function() {
-                // 読み込み成功時の処理
+                // 読み込み成功
                 piece.style.backgroundColor = '#f8f9fa';
-                piece.textContent = '';
             };
-            
-            const row = Math.floor(puzzleGrid[i] / 3);
-            const col = puzzleGrid[i] % 3;
-            
-            // モバイルかデスクトップかで異なるサイズを使用
-            const isMobile = isMobileDevice();
-            const pieceSize = isMobile ? 80 : 120;
-            const totalSize = isMobile ? 240 : 360;
-            
-            // クリップパスを使用してパズルピースを表示
-            const clipX = (col * 33.333333) + '%';
-            const clipY = (row * 33.333333) + '%';
-            
-            img.style.clipPath = `inset(${clipY} ${100 - (col + 1) * 33.333333}% ${100 - (row + 1) * 33.333333}% ${clipX})`;
-            img.style.transform = `translate(-${col * pieceSize}px, -${row * pieceSize}px)`;
-            img.style.width = totalSize + 'px';
-            img.style.height = totalSize + 'px';
             
             piece.appendChild(img);
             
@@ -484,8 +599,32 @@ function showQuiz() {
     // 完成画像を表示
     elements.completedImage.innerHTML = '';
     const completedImg = document.createElement('img');
-    completedImg.src = currentService.image;
     completedImg.alt = currentService.name;
+    
+    // Safari対応：SVGをData URLとして読み込み
+    if (currentService.image.endsWith('.svg')) {
+        fetch(currentService.image)
+            .then(response => response.text())
+            .then(svgText => {
+                if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                    svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                }
+                const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                completedImg.src = url;
+                
+                completedImg.onload = function() {
+                    URL.revokeObjectURL(url);
+                };
+            })
+            .catch(error => {
+                console.warn('完成画像SVG fetch エラー:', error);
+                completedImg.src = currentService.image;
+            });
+    } else {
+        completedImg.src = currentService.image;
+    }
+    
     completedImg.onerror = function() {
         console.warn('完成画像の読み込みエラー:', currentService.image);
         elements.completedImage.style.backgroundColor = '#e9ecef';
@@ -547,8 +686,32 @@ function showResult() {
     if (currentService) {
         completedServiceIcon.innerHTML = '';
         const serviceImg = document.createElement('img');
-        serviceImg.src = currentService.image;
         serviceImg.alt = currentService.name;
+        
+        // Safari対応：SVGをData URLとして読み込み
+        if (currentService.image.endsWith('.svg')) {
+            fetch(currentService.image)
+                .then(response => response.text())
+                .then(svgText => {
+                    if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                        svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                    }
+                    const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    serviceImg.src = url;
+                    
+                    serviceImg.onload = function() {
+                        URL.revokeObjectURL(url);
+                    };
+                })
+                .catch(error => {
+                    console.warn('サービスアイコンSVG fetch エラー:', error);
+                    serviceImg.src = currentService.image;
+                });
+        } else {
+            serviceImg.src = currentService.image;
+        }
+        
         serviceImg.onerror = function() {
             console.warn('サービスアイコンの読み込みエラー:', currentService.image);
             completedServiceIcon.style.backgroundColor = '#e9ecef';
