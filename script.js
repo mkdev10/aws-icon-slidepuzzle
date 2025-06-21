@@ -8,7 +8,17 @@ let currentIconIndex = 0; // 現在切り替え中のアイコンのインデッ
 
 // プレビューアイコンを初期化する関数
 function initPreviewIcons() {
-    if (awsServices.length === 0) return;
+    if (awsServices.length === 0) {
+        console.log('AWSサービスデータがまだ読み込まれていません');
+        return;
+    }
+    
+    console.log('プレビューアイコンを初期化中...');
+    
+    // 既存のインターバルをクリア
+    if (previewInterval) {
+        clearInterval(previewInterval);
+    }
     
     // 最初の3つのアイコンを表示
     initializeFirstIcons();
@@ -21,6 +31,8 @@ function initPreviewIcons() {
 
 // 最初の3つのアイコンを初期化
 function initializeFirstIcons() {
+    console.log('最初の3つのアイコンを初期化中...');
+    
     const icons = [
         document.getElementById('preview-icon-1'),
         document.getElementById('preview-icon-2'),
@@ -29,14 +41,18 @@ function initializeFirstIcons() {
     
     // 最初の3つのアイコンを設定
     for (let i = 0; i < 3; i++) {
-        const service = awsServices[i];
-        icons[i].src = service.image;
-        icons[i].alt = service.name;
-        
-        // 少しずつ遅延させて表示
-        setTimeout(() => {
-            icons[i].classList.add('fade-in');
-        }, i * 200);
+        if (i < awsServices.length) {
+            const service = awsServices[i];
+            icons[i].src = service.image;
+            icons[i].alt = service.name;
+            
+            console.log(`アイコン${i + 1}を設定: ${service.name}`);
+            
+            // 少しずつ遅延させて表示
+            setTimeout(() => {
+                icons[i].classList.add('fade-in');
+            }, i * 200);
+        }
     }
     
     currentPreviewIndex = 3; // 次に表示するサービスのインデックス
@@ -97,8 +113,11 @@ async function loadAwsServices() {
         // 最初の数個のサービス名をデバッグ出力
         console.log('読み込まれたサービス例:', awsServices.slice(0, 5).map(s => s.name));
         
-        // プレビューアイコンを開始
-        initPreviewIcons();
+        // スタート画面が表示されている場合のみプレビューアイコンを開始
+        const startScreen = document.getElementById('start-screen');
+        if (startScreen && !startScreen.classList.contains('hidden')) {
+            initPreviewIcons();
+        }
         
     } catch (error) {
         console.error('AWSサービスデータの読み込みに失敗しました:', error);
@@ -405,6 +424,15 @@ function showResult() {
     showScreen('result');
     const totalTime = Math.floor((Date.now() - startTime) / 1000);
     
+    // プレイしたサービスの情報を表示
+    const completedServiceIcon = document.getElementById('completed-service-icon');
+    const completedServiceName = document.getElementById('completed-service-name');
+    
+    if (currentService) {
+        completedServiceIcon.style.backgroundImage = `url(${currentService.image})`;
+        completedServiceName.textContent = currentService.name;
+    }
+    
     if (isGaveUp) {
         elements.finalTime.textContent = `完了時間: ${formatTime(totalTime)} (ギブアップ)`;
         elements.finalTime.style.color = '#dc3545';
@@ -486,6 +514,11 @@ function resetToStart() {
 
 // ページ読み込み時にAWSサービスデータを事前読み込み
 document.addEventListener('DOMContentLoaded', function() {
+    // プレビューアイコンを表示状態にする（初期はスタート画面なので）
+    const previewIcons = document.getElementById('preview-icons');
+    previewIcons.classList.remove('hidden');
+    
+    // AWSサービスデータを読み込み
     loadAwsServices();
 });
 

@@ -250,6 +250,30 @@ h2 {
 }
 
 /* 結果画面 */
+#completed-service-info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#completed-service-icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#completed-service-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #232F3E;
+    margin-bottom: 10px;
+}
+
 #final-time, #final-moves {
     font-size: 18px;
     margin: 10px 0;
@@ -370,6 +394,15 @@ h2 {
     #completed-image {
         width: 150px;
         height: 150px;
+    }
+    
+    #completed-service-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #completed-service-name {
+        font-size: 18px;
     }
     
     #quiz-options {
