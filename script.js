@@ -1,6 +1,11 @@
 // AWSサービスデータ（JSONファイルから読み込み）
 let awsServices = [];
 
+// モバイルデバイス検出
+function isMobileDevice() {
+    return window.innerWidth <= 480 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 // プレビューアイコン関連の変数
 let previewInterval = null;
 let currentPreviewIndex = 0;
@@ -46,6 +51,18 @@ function initializeFirstIcons() {
             icons[i].src = service.image;
             icons[i].alt = service.name;
             
+            // エラーハンドリング
+            icons[i].onerror = function() {
+                console.warn('プレビューアイコンの読み込みエラー:', service.image);
+                this.style.backgroundColor = '#e9ecef';
+                this.style.display = 'flex';
+                this.style.alignItems = 'center';
+                this.style.justifyContent = 'center';
+                this.style.fontSize = '10px';
+                this.style.color = '#666';
+                this.innerHTML = service.name.substring(0, 3);
+            };
+            
             console.log(`アイコン${i + 1}を設定: ${service.name}`);
             
             // 少しずつ遅延させて表示
@@ -78,6 +95,18 @@ function updateSinglePreviewIcon() {
         const service = awsServices[currentPreviewIndex % awsServices.length];
         targetIcon.src = service.image;
         targetIcon.alt = service.name;
+        
+        // エラーハンドリング
+        targetIcon.onerror = function() {
+            console.warn('プレビューアイコン更新時の読み込みエラー:', service.image);
+            this.style.backgroundColor = '#e9ecef';
+            this.style.display = 'flex';
+            this.style.alignItems = 'center';
+            this.style.justifyContent = 'center';
+            this.style.fontSize = '10px';
+            this.style.color = '#666';
+            this.innerHTML = service.name.substring(0, 3);
+        };
         
         // 回転しながらフェードイン
         setTimeout(() => {
@@ -281,11 +310,61 @@ function renderPuzzle() {
         if (puzzleGrid[i] === 8) {
             piece.classList.add('empty');
             piece.textContent = '';
+            piece.innerHTML = '';
         } else {
+            piece.classList.remove('empty');
+            piece.textContent = '';
+            
+            // 既存のimg要素を削除
+            const existingImg = piece.querySelector('img');
+            if (existingImg) {
+                existingImg.remove();
+            }
+            
+            // 新しいimg要素を作成
+            const img = document.createElement('img');
+            img.src = currentService.image;
+            img.alt = currentService.name;
+            img.style.pointerEvents = 'none';
+            img.style.userSelect = 'none';
+            img.style.webkitUserSelect = 'none';
+            img.style.webkitUserDrag = 'none';
+            img.style.webkitTouchCallout = 'none';
+            
+            // Safari対応：SVG読み込みエラーハンドリング
+            img.onerror = function() {
+                console.warn('SVG読み込みエラー:', currentService.image);
+                // フォールバック：背景色で表示
+                piece.style.backgroundColor = '#e9ecef';
+                piece.textContent = currentService.name.substring(0, 3);
+                piece.style.fontSize = '12px';
+                piece.style.color = '#666';
+            };
+            
+            img.onload = function() {
+                // 読み込み成功時の処理
+                piece.style.backgroundColor = '#f8f9fa';
+                piece.textContent = '';
+            };
+            
             const row = Math.floor(puzzleGrid[i] / 3);
             const col = puzzleGrid[i] % 3;
-            piece.style.backgroundImage = `url(${currentService.image})`;
-            piece.style.backgroundPosition = `-${col * 120}px -${row * 120}px`;
+            
+            // モバイルかデスクトップかで異なるサイズを使用
+            const isMobile = isMobileDevice();
+            const pieceSize = isMobile ? 80 : 120;
+            const totalSize = isMobile ? 240 : 360;
+            
+            // クリップパスを使用してパズルピースを表示
+            const clipX = (col * 33.333333) + '%';
+            const clipY = (row * 33.333333) + '%';
+            
+            img.style.clipPath = `inset(${clipY} ${100 - (col + 1) * 33.333333}% ${100 - (row + 1) * 33.333333}% ${clipX})`;
+            img.style.transform = `translate(-${col * pieceSize}px, -${row * pieceSize}px)`;
+            img.style.width = totalSize + 'px';
+            img.style.height = totalSize + 'px';
+            
+            piece.appendChild(img);
             
             // イベントリスナーを追加（タッチとクリック両方に対応）
             piece.addEventListener('click', (e) => {
@@ -402,7 +481,17 @@ function showQuiz() {
         elements.quizTitle.style.color = '#232F3E';
     }
     
-    elements.completedImage.style.backgroundImage = `url(${currentService.image})`;
+    // 完成画像を表示
+    elements.completedImage.innerHTML = '';
+    const completedImg = document.createElement('img');
+    completedImg.src = currentService.image;
+    completedImg.alt = currentService.name;
+    completedImg.onerror = function() {
+        console.warn('完成画像の読み込みエラー:', currentService.image);
+        elements.completedImage.style.backgroundColor = '#e9ecef';
+        elements.completedImage.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">${currentService.name}</div>`;
+    };
+    elements.completedImage.appendChild(completedImg);
     
     // 選択肢をシャッフル
     const shuffledOptions = [...currentService.options].sort(() => Math.random() - 0.5);
@@ -456,7 +545,16 @@ function showResult() {
     const completedServiceName = document.getElementById('completed-service-name');
     
     if (currentService) {
-        completedServiceIcon.style.backgroundImage = `url(${currentService.image})`;
+        completedServiceIcon.innerHTML = '';
+        const serviceImg = document.createElement('img');
+        serviceImg.src = currentService.image;
+        serviceImg.alt = currentService.name;
+        serviceImg.onerror = function() {
+            console.warn('サービスアイコンの読み込みエラー:', currentService.image);
+            completedServiceIcon.style.backgroundColor = '#e9ecef';
+            completedServiceIcon.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">${currentService.name.substring(0, 5)}</div>`;
+        };
+        completedServiceIcon.appendChild(serviceImg);
         completedServiceName.textContent = currentService.name;
     }
     
