@@ -191,7 +191,7 @@ h2 {
     border: 2px solid #fff;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: border-color 0.15s ease, transform 0.15s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,6 +207,8 @@ h2 {
     -ms-user-select: none;
     user-select: none;
     overflow: hidden;
+    will-change: border-color, transform;
+    backface-visibility: hidden;
 }
 
 .puzzle-piece img {
@@ -222,6 +224,8 @@ h2 {
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .puzzle-piece:hover {

@@ -397,31 +397,85 @@ function initializePuzzle() {
     renderPuzzle();
 }
 
-// パズル描画
+// パズル描画（初期化用）
 function renderPuzzle() {
     elements.puzzleGrid.innerHTML = '';
     
     for (let i = 0; i < 9; i++) {
         const piece = document.createElement('div');
         piece.className = 'puzzle-piece';
+        piece.dataset.position = i; // 位置を記録
         
-        if (puzzleGrid[i] === 8) {
-            piece.classList.add('empty');
-            piece.textContent = '';
+        // イベントリスナーを追加（タッチとクリック両方に対応）
+        piece.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            movePiece(i);
+        });
+        
+        piece.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            movePiece(i);
+        });
+        
+        elements.puzzleGrid.appendChild(piece);
+    }
+    
+    // 各ピースの内容を更新
+    updateAllPieces();
+}
+
+// 全ピースの内容を更新
+function updateAllPieces() {
+    const pieces = elements.puzzleGrid.querySelectorAll('.puzzle-piece');
+    
+    for (let i = 0; i < 9; i++) {
+        updateSinglePiece(pieces[i], i);
+    }
+}
+
+// 単一ピースの内容を更新
+function updateSinglePiece(piece, position) {
+    const pieceValue = puzzleGrid[position];
+    
+    if (pieceValue === 8) {
+        // 空白ピース
+        piece.className = 'puzzle-piece empty';
+        piece.innerHTML = '';
+        piece.style.backgroundColor = '#f0f0f0';
+    } else {
+        // 通常のピース
+        piece.className = 'puzzle-piece';
+        
+        const row = Math.floor(pieceValue / 3);
+        const col = pieceValue % 3;
+        const isMobile = isMobileDevice();
+        const pieceSize = isMobile ? 80 : 120;
+        
+        // 既存の画像があるかチェック
+        let img = piece.querySelector('img');
+        if (!img) {
+            img = document.createElement('img');
             piece.innerHTML = '';
-        } else {
-            piece.classList.remove('empty');
-            piece.textContent = '';
-            piece.innerHTML = '';
-            
-            const row = Math.floor(puzzleGrid[i] / 3);
-            const col = puzzleGrid[i] % 3;
-            const isMobile = isMobileDevice();
-            const pieceSize = isMobile ? 80 : 120;
-            
-            // 画像要素を作成
-            const img = document.createElement('img');
-            
+            piece.appendChild(img);
+        }
+        
+        // 画像の位置を更新
+        img.alt = currentService.name;
+        img.style.width = (pieceSize * 3) + 'px';
+        img.style.height = (pieceSize * 3) + 'px';
+        img.style.objectFit = 'contain';
+        img.style.position = 'absolute';
+        img.style.top = (-row * pieceSize) + 'px';
+        img.style.left = (-col * pieceSize) + 'px';
+        img.style.pointerEvents = 'none';
+        img.style.userSelect = 'none';
+        img.style.webkitUserSelect = 'none';
+        img.style.webkitUserDrag = 'none';
+        
+        // 画像ソースが未設定の場合のみ設定
+        if (!img.src || img.src === window.location.href) {
             // Safari対応：SVGをData URLとして読み込み
             if (currentService.image.endsWith('.svg')) {
                 fetch(currentService.image)
@@ -449,18 +503,6 @@ function renderPuzzle() {
                 img.src = currentService.image;
             }
             
-            img.alt = currentService.name;
-            img.style.width = (pieceSize * 3) + 'px';
-            img.style.height = (pieceSize * 3) + 'px';
-            img.style.objectFit = 'contain';
-            img.style.position = 'absolute';
-            img.style.top = (-row * pieceSize) + 'px';
-            img.style.left = (-col * pieceSize) + 'px';
-            img.style.pointerEvents = 'none';
-            img.style.userSelect = 'none';
-            img.style.webkitUserSelect = 'none';
-            img.style.webkitUserDrag = 'none';
-            
             // エラーハンドリング
             img.onerror = function() {
                 console.warn('SVG読み込みエラー:', currentService.image);
@@ -478,25 +520,17 @@ function renderPuzzle() {
                 // 読み込み成功
                 piece.style.backgroundColor = '#f8f9fa';
             };
-            
-            piece.appendChild(img);
-            
-            // イベントリスナーを追加（タッチとクリック両方に対応）
-            piece.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                movePiece(i);
-            });
-            
-            piece.addEventListener('touchend', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                movePiece(i);
-            });
         }
         
-        elements.puzzleGrid.appendChild(piece);
+        piece.style.backgroundColor = '#f8f9fa';
     }
+}
+
+// 高速更新用：移動したピースのみ更新
+function updateMovedPieces(oldPosition, newPosition) {
+    const pieces = elements.puzzleGrid.querySelectorAll('.puzzle-piece');
+    updateSinglePiece(pieces[oldPosition], oldPosition);
+    updateSinglePiece(pieces[newPosition], newPosition);
 }
 
 // ピース移動
@@ -504,18 +538,24 @@ function movePiece(position) {
     if (!isGameActive) return;
     
     // イベントの伝播を防ぐ
-    event.preventDefault();
-    event.stopPropagation();
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
     
     const canMove = isAdjacentToEmpty(position);
     if (canMove) {
+        const oldEmptyPosition = emptyPosition;
+        
         // ピースと空白を交換
         [puzzleGrid[position], puzzleGrid[emptyPosition]] = [puzzleGrid[emptyPosition], puzzleGrid[position]];
         emptyPosition = position;
         
         moves++;
         updateMoves();
-        renderPuzzle();
+        
+        // 高速更新：移動したピースのみ更新
+        updateMovedPieces(position, oldEmptyPosition);
         
         // パズル完成チェック
         if (isPuzzleComplete()) {
