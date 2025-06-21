@@ -1,0 +1,3072 @@
+[
+    {
+        "name": "AWS Activate",
+        "image": "./asset/Arch_AWS-Activate_64.svg",
+        "options": [
+            "AWS Private 5G",
+            "AWS Shield",
+            "AWS Activate",
+            "AWS Application Discovery Service"
+        ]
+    },
+    {
+        "name": "AWS Amplify",
+        "image": "./asset/Arch_AWS-Amplify_64.svg",
+        "options": [
+            "Amazon Location Service",
+            "AWS Batch",
+            "AWS Backup",
+            "AWS Amplify"
+        ]
+    },
+    {
+        "name": "AWS App Mesh",
+        "image": "./asset/Arch_AWS-App-Mesh_64.svg",
+        "options": [
+            "AWS App Mesh",
+            "Amazon Simple Storage Service Glacier",
+            "Amazon ECR",
+            "AWS Outposts family"
+        ]
+    },
+    {
+        "name": "AWS App Runner",
+        "image": "./asset/Arch_AWS-App-Runner_64.svg",
+        "options": [
+            "AWS Elastic Beanstalk",
+            "Amazon AppFlow",
+            "AWS App Runner",
+            "Amazon Elastic Inference"
+        ]
+    },
+    {
+        "name": "AWS App Studio",
+        "image": "./asset/Arch_AWS-App-Studio_64.svg",
+        "options": [
+            "Amazon Corretto",
+            "AWS Distro for OpenTelemetry",
+            "AWS Entity Resolution",
+            "AWS App Studio"
+        ]
+    },
+    {
+        "name": "AWS AppConfig",
+        "image": "./asset/Arch_AWS-AppConfig_64.svg",
+        "options": [
+            "AWS Budgets",
+            "Amazon Kinesis Data Streams",
+            "Amazon CloudWatch",
+            "AWS AppConfig"
+        ]
+    },
+    {
+        "name": "AWS AppFabric",
+        "image": "./asset/Arch_AWS-AppFabric_64.svg",
+        "options": [
+            "Amazon Corretto",
+            "AWS CodeDeploy",
+            "AWS Nitro Enclaves",
+            "AWS AppFabric"
+        ]
+    },
+    {
+        "name": "AWS AppSync",
+        "image": "./asset/Arch_AWS-AppSync_64.svg",
+        "options": [
+            "AWS AppSync",
+            "AWS Professional Services",
+            "AWS Console Mobile Application",
+            "AWS DeepLens"
+        ]
+    },
+    {
+        "name": "AWS Application Auto Scaling",
+        "image": "./asset/Arch_AWS-Application-Auto-Scaling_64.svg",
+        "options": [
+            "AWS Application Auto Scaling",
+            "Amazon Braket",
+            "Amazon Detective",
+            "AWS Managed Services"
+        ]
+    },
+    {
+        "name": "AWS Application Discovery Service",
+        "image": "./asset/Arch_AWS-Application-Discovery-Service_64.svg",
+        "options": [
+            "AWS Application Discovery Service",
+            "Amazon SageMaker Studio Lab",
+            "AWS Private 5G",
+            "AWS Marketplace_Dark"
+        ]
+    },
+    {
+        "name": "AWS Application Migration Service",
+        "image": "./asset/Arch_AWS-Application-Migration-Service_64.svg",
+        "options": [
+            "Amazon API Gateway",
+            "AWS CloudFormation",
+            "AWS Application Migration Service",
+            "AWS Payment Cryptography"
+        ]
+    },
+    {
+        "name": "AWS Artifact",
+        "image": "./asset/Arch_AWS-Artifact_64.svg",
+        "options": [
+            "AWS Managed Services",
+            "AWS Telco Network Builder",
+            "AWS Artifact",
+            "AWS Cloud Development Kit"
+        ]
+    },
+    {
+        "name": "AWS Audit Manager",
+        "image": "./asset/Arch_AWS-Audit-Manager_64.svg",
+        "options": [
+            "AWS IQ",
+            "AWS Security Hub",
+            "AWS Audit Manager",
+            "Amazon WorkDocs"
+        ]
+    },
+    {
+        "name": "AWS Auto Scaling",
+        "image": "./asset/Arch_AWS-Auto-Scaling_64.svg",
+        "options": [
+            "AWS Auto Scaling",
+            "AWS Marketplace_Light",
+            "Amazon Corretto",
+            "Amazon Elastic Inference"
+        ]
+    },
+    {
+        "name": "AWS B2B Data Interchange",
+        "image": "./asset/Arch_AWS-B2B-Data-Interchange_64.svg",
+        "options": [
+            "AWS B2B Data Interchange",
+            "AWS Glue DataBrew",
+            "AWS Distro for OpenTelemetry",
+            "AWS Data Transfer Terminal"
+        ]
+    },
+    {
+        "name": "AWS Backint Agent",
+        "image": "./asset/Arch_AWS-Backint-Agent_64.svg",
+        "options": [
+            "Amazon EKS Cloud",
+            "AWS Backint Agent",
+            "Amazon Lex",
+            "Amazon Connect"
+        ]
+    },
+    {
+        "name": "AWS Backup",
+        "image": "./asset/Arch_AWS-Backup_64.svg",
+        "options": [
+            "AWS Security Hub",
+            "Amazon S3 on Outposts",
+            "AWS Backup",
+            "Amazon SageMaker"
+        ]
+    },
+    {
+        "name": "AWS Batch",
+        "image": "./asset/Arch_AWS-Batch_64.svg",
+        "options": [
+            "AWS Elastic Beanstalk",
+            "AWS Batch",
+            "AWS Amplify",
+            "Amazon EC2"
+        ]
+    },
+    {
+        "name": "AWS Billing Conductor",
+        "image": "./asset/Arch_AWS-Billing-Conductor_64.svg",
+        "options": [
+            "Amazon Personalize",
+            "AWS Billing Conductor",
+            "AWS IoT TwinMaker",
+            "AWS Verified Access"
+        ]
+    },
+    {
+        "name": "AWS Budgets",
+        "image": "./asset/Arch_AWS-Budgets_64.svg",
+        "options": [
+            "AWS WAF",
+            "AWS Support",
+            "Amazon Managed Service for Apache Flink",
+            "AWS Budgets"
+        ]
+    },
+    {
+        "name": "AWS Certificate Manager",
+        "image": "./asset/Arch_AWS-Certificate-Manager_64.svg",
+        "options": [
+            "AWS Directory Service",
+            "AWS KMS",
+            "AWS Payment Cryptography",
+            "AWS Certificate Manager"
+        ]
+    },
+    {
+        "name": "AWS Chatbot",
+        "image": "./asset/Arch_AWS-Chatbot_64.svg",
+        "options": [
+            "AWS Chatbot",
+            "AWS Elemental MediaConnect",
+            "Amazon Lookout for Equipment",
+            "AWS HealthImaging"
+        ]
+    },
+    {
+        "name": "AWS Clean Rooms",
+        "image": "./asset/Arch_AWS-Clean-Rooms_64.svg",
+        "options": [
+            "AWS Clean Rooms",
+            "Amazon EC2 Image Builder",
+            "AWS Outposts rack",
+            "AWS Training Certification"
+        ]
+    },
+    {
+        "name": "AWS Client VPN",
+        "image": "./asset/Arch_AWS-Client-VPN_64.svg",
+        "options": [
+            "AWS PrivateLink",
+            "AWS CodeArtifact",
+            "AWS Client VPN",
+            "AWS Network Firewall"
+        ]
+    },
+    {
+        "name": "AWS Cloud Control API",
+        "image": "./asset/Arch_AWS-Cloud-Control-API_64.svg",
+        "options": [
+            "AWS CloudTrail",
+            "AWS Command Line Interface",
+            "AWS Cloud Control API",
+            "AWS Amplify"
+        ]
+    },
+    {
+        "name": "AWS Cloud Development Kit",
+        "image": "./asset/Arch_AWS-Cloud-Development-Kit_64.svg",
+        "options": [
+            "AWS CloudHSM",
+            "AWS Proton",
+            "AWS Cloud Development Kit",
+            "AWS Site to Site VPN"
+        ]
+    },
+    {
+        "name": "AWS Cloud Map",
+        "image": "./asset/Arch_AWS-Cloud-Map_64.svg",
+        "options": [
+            "Amazon EKS Anywhere",
+            "AWS Elastic Fabric Adapter",
+            "AWS Cloud Map",
+            "AWS Resource Access Manager"
+        ]
+    },
+    {
+        "name": "AWS Cloud WAN",
+        "image": "./asset/Arch_AWS-Cloud-WAN_64.svg",
+        "options": [
+            "AWS Transit Gateway",
+            "AWS Cloud WAN",
+            "Amazon CloudFront",
+            "Amazon EMR"
+        ]
+    },
+    {
+        "name": "AWS Cloud9",
+        "image": "./asset/Arch_AWS-Cloud9_64.svg",
+        "options": [
+            "AWS CloudShell",
+            "Amazon ECS Anywhere",
+            "Amazon API Gateway",
+            "AWS Cloud9"
+        ]
+    },
+    {
+        "name": "AWS CloudFormation",
+        "image": "./asset/Arch_AWS-CloudFormation_64.svg",
+        "options": [
+            "Amazon Fraud Detector",
+            "AWS Service Catalog",
+            "AWS CloudFormation",
+            "AWS Elemental Server"
+        ]
+    },
+    {
+        "name": "AWS CloudHSM",
+        "image": "./asset/Arch_AWS-CloudHSM_64.svg",
+        "options": [
+            "AWS Resource Explorer",
+            "AWS Command Line Interface",
+            "Amazon FinSpace",
+            "AWS CloudHSM"
+        ]
+    },
+    {
+        "name": "AWS CloudShell",
+        "image": "./asset/Arch_AWS-CloudShell_64.svg",
+        "options": [
+            "AWS HealthScribe",
+            "AWS CloudShell",
+            "AWS CodeCommit",
+            "Amazon EKS Anywhere"
+        ]
+    },
+    {
+        "name": "AWS CloudTrail",
+        "image": "./asset/Arch_AWS-CloudTrail_64.svg",
+        "options": [
+            "Amazon Corretto",
+            "Amazon Augmented AI A2I",
+            "AWS DeepLens",
+            "AWS CloudTrail"
+        ]
+    },
+    {
+        "name": "AWS CodeArtifact",
+        "image": "./asset/Arch_AWS-CodeArtifact_64.svg",
+        "options": [
+            "AWS CodeDeploy",
+            "AWS CodeCommit",
+            "AWS CodeArtifact",
+            "Amazon VPC Lattice"
+        ]
+    },
+    {
+        "name": "AWS CodeBuild",
+        "image": "./asset/Arch_AWS-CodeBuild_64.svg",
+        "options": [
+            "AWS NICE EnginFrame",
+            "AWS CodeCommit",
+            "AWS Cloud9",
+            "AWS CodeBuild"
+        ]
+    },
+    {
+        "name": "AWS CodeCommit",
+        "image": "./asset/Arch_AWS-CodeCommit_64.svg",
+        "options": [
+            "Amazon Lookout for Metrics",
+            "AWS Oracle Database at AWS",
+            "AWS CodeCommit",
+            "AWS Cloud9"
+        ]
+    },
+    {
+        "name": "AWS CodeDeploy",
+        "image": "./asset/Arch_AWS-CodeDeploy_64.svg",
+        "options": [
+            "AWS TensorFlow on AWS",
+            "AWS CodeDeploy",
+            "AWS CodeCommit",
+            "AWS CloudShell"
+        ]
+    },
+    {
+        "name": "AWS CodePipeline",
+        "image": "./asset/Arch_AWS-CodePipeline_64.svg",
+        "options": [
+            "Amazon ECR",
+            "AWS CodePipeline",
+            "AWS Cloud9",
+            "AWS Cost Explorer"
+        ]
+    },
+    {
+        "name": "AWS Command Line Interface",
+        "image": "./asset/Arch_AWS-Command-Line-Interface_64.svg",
+        "options": [
+            "AWS Command Line Interface",
+            "Amazon EC2 Auto Scaling",
+            "AWS Step Functions",
+            "AWS Resilience Hub"
+        ]
+    },
+    {
+        "name": "AWS Compute Optimizer",
+        "image": "./asset/Arch_AWS-Compute-Optimizer_64.svg",
+        "options": [
+            "Amazon EC2 Auto Scaling",
+            "AWS Compute Optimizer",
+            "AWS Batch",
+            "AWS App Studio"
+        ]
+    },
+    {
+        "name": "AWS Config",
+        "image": "./asset/Arch_AWS-Config_64.svg",
+        "options": [
+            "Amazon Personalize",
+            "AWS Service Catalog",
+            "AWS Config",
+            "AWS Managed Services"
+        ]
+    },
+    {
+        "name": "AWS Console Mobile Application",
+        "image": "./asset/Arch_AWS-Console-Mobile-Application_64.svg",
+        "options": [
+            "AWS Console Mobile Application",
+            "Amazon CodeGuru",
+            "AWS Snowball",
+            "AWS Resource Access Manager"
+        ]
+    },
+    {
+        "name": "AWS Control Tower",
+        "image": "./asset/Arch_AWS-Control-Tower_64.svg",
+        "options": [
+            "Amazon Transcribe",
+            "AWS Systems Manager",
+            "AWS Thinkbox Frost",
+            "AWS Control Tower"
+        ]
+    },
+    {
+        "name": "AWS Cost Explorer",
+        "image": "./asset/Arch_AWS-Cost-Explorer_64.svg",
+        "options": [
+            "AWS Glue",
+            "AWS Cost Explorer",
+            "AWS Budgets",
+            "Amazon Transcribe"
+        ]
+    },
+    {
+        "name": "AWS Cost and Usage Report",
+        "image": "./asset/Arch_AWS-Cost-and-Usage-Report_64.svg",
+        "options": [
+            "AWS Systems Manager",
+            "AWS Cost and Usage Report",
+            "AWS Config",
+            "AWS Security Hub"
+        ]
+    },
+    {
+        "name": "AWS Data Exchange",
+        "image": "./asset/Arch_AWS-Data-Exchange_64.svg",
+        "options": [
+            "AWS Shield",
+            "AWS Clean Rooms",
+            "Amazon Kinesis",
+            "AWS Data Exchange"
+        ]
+    },
+    {
+        "name": "AWS Data Transfer Terminal",
+        "image": "./asset/Arch_AWS-Data-Transfer-Terminal_64.svg",
+        "options": [
+            "AWS Glue",
+            "AWS Data Transfer Terminal",
+            "Amazon OpenSearch Service",
+            "Amazon Transcribe"
+        ]
+    },
+    {
+        "name": "AWS DataSync",
+        "image": "./asset/Arch_AWS-DataSync_64.svg",
+        "options": [
+            "AWS Firewall Manager",
+            "Amazon Simple Storage Service Glacier",
+            "AWS Data Transfer Terminal",
+            "AWS DataSync"
+        ]
+    },
+    {
+        "name": "AWS Database Migration Service",
+        "image": "./asset/Arch_AWS-Database-Migration-Service_64.svg",
+        "options": [
+            "AWS Tools and SDKs",
+            "AWS Glue DataBrew",
+            "AWS Database Migration Service",
+            "AWS Data Exchange"
+        ]
+    },
+    {
+        "name": "AWS Deadline Cloud",
+        "image": "./asset/Arch_AWS-Deadline-Cloud_64.svg",
+        "options": [
+            "AWS Resource Explorer",
+            "AWS Deadline Cloud",
+            "AWS DeepLens",
+            "Amazon Braket"
+        ]
+    },
+    {
+        "name": "AWS Deep Learning AMIs",
+        "image": "./asset/Arch_AWS-Deep-Learning-AMIs_64.svg",
+        "options": [
+            "AWS Infrastructure Composer",
+            "Amazon Augmented AI A2I",
+            "Amazon EMR",
+            "AWS Deep Learning AMIs"
+        ]
+    },
+    {
+        "name": "AWS Deep Learning Containers",
+        "image": "./asset/Arch_AWS-Deep-Learning-Containers_64.svg",
+        "options": [
+            "Amazon Lex",
+            "AWS Ground Station",
+            "Amazon Fraud Detector",
+            "AWS Deep Learning Containers"
+        ]
+    },
+    {
+        "name": "AWS DeepComposer",
+        "image": "./asset/Arch_AWS-DeepComposer_64.svg",
+        "options": [
+            "Amazon Kinesis Data Streams",
+            "AWS DeepComposer",
+            "Amazon Forecast",
+            "Amazon Comprehend Medical"
+        ]
+    },
+    {
+        "name": "AWS DeepLens",
+        "image": "./asset/Arch_AWS-DeepLens_64.svg",
+        "options": [
+            "Amazon EC2 Image Builder",
+            "AWS DeepLens",
+            "AWS Deep Learning AMIs",
+            "AWS IoT Greengrass"
+        ]
+    },
+    {
+        "name": "AWS DeepRacer",
+        "image": "./asset/Arch_AWS-DeepRacer_64.svg",
+        "options": [
+            "Amazon Managed Workflows for Apache Airflow",
+            "Amazon EC2 Auto Scaling",
+            "AWS DeepRacer",
+            "Amazon Transcribe"
+        ]
+    },
+    {
+        "name": "AWS Device Farm",
+        "image": "./asset/Arch_AWS-Device-Farm_64.svg",
+        "options": [
+            "AWS Budgets",
+            "AWS Migration Evaluator",
+            "AWS Step Functions",
+            "AWS Device Farm"
+        ]
+    },
+    {
+        "name": "AWS Direct Connect",
+        "image": "./asset/Arch_AWS-Direct-Connect_64.svg",
+        "options": [
+            "Amazon CloudFront",
+            "Amazon Polly",
+            "AWS Transit Gateway",
+            "AWS Direct Connect"
+        ]
+    },
+    {
+        "name": "AWS Directory Service",
+        "image": "./asset/Arch_AWS-Directory-Service_64.svg",
+        "options": [
+            "AWS Certificate Manager",
+            "Amazon FSx for OpenZFS",
+            "Amazon Inspector",
+            "AWS Directory Service"
+        ]
+    },
+    {
+        "name": "AWS Distro for OpenTelemetry",
+        "image": "./asset/Arch_AWS-Distro-for-OpenTelemetry_64.svg",
+        "options": [
+            "Amazon Managed Service for Apache Flink",
+            "AWS Distro for OpenTelemetry",
+            "AWS X Ray",
+            "AWS Cloud Development Kit"
+        ]
+    },
+    {
+        "name": "AWS Elastic Beanstalk",
+        "image": "./asset/Arch_AWS-Elastic-Beanstalk_64.svg",
+        "options": [
+            "AWS Elastic Beanstalk",
+            "Amazon EKS Cloud",
+            "Amazon Lightsail for Research",
+            "AWS Lambda"
+        ]
+    },
+    {
+        "name": "AWS Elastic Disaster Recovery",
+        "image": "./asset/Arch_AWS-Elastic-Disaster-Recovery_64.svg",
+        "options": [
+            "AWS Elastic Disaster Recovery",
+            "Amazon Connect",
+            "Amazon ECS",
+            "AWS Nitro Enclaves"
+        ]
+    },
+    {
+        "name": "AWS Elemental Appliances & Software",
+        "image": "./asset/Arch_AWS-Elemental-Appliances-&-Software_64.svg",
+        "options": [
+            "AWS Thinkbox Stoke",
+            "AWS Elemental Server",
+            "AWS Elemental Appliances & Software",
+            "AWS Elemental Conductor"
+        ]
+    },
+    {
+        "name": "AWS Elemental Conductor",
+        "image": "./asset/Arch_AWS-Elemental-Conductor_64.svg",
+        "options": [
+            "AWS Elemental Conductor",
+            "Amazon File Cache",
+            "Amazon Interactive Video Service",
+            "AWS Elemental MediaStore"
+        ]
+    },
+    {
+        "name": "AWS Elemental Delta",
+        "image": "./asset/Arch_AWS-Elemental-Delta_64.svg",
+        "options": [
+            "Amazon Interactive Video Service",
+            "AWS Snowball Edge",
+            "AWS Elemental Delta",
+            "AWS Cost Explorer"
+        ]
+    },
+    {
+        "name": "AWS Elemental Link",
+        "image": "./asset/Arch_AWS-Elemental-Link_64.svg",
+        "options": [
+            "AWS Elemental Live",
+            "Amazon Interactive Video Service",
+            "AWS Fault Injection Service",
+            "AWS Elemental Link"
+        ]
+    },
+    {
+        "name": "AWS Elemental Live",
+        "image": "./asset/Arch_AWS-Elemental-Live_64.svg",
+        "options": [
+            "Amazon Elastic Transcoder",
+            "AWS Elemental Live",
+            "AWS Elemental Conductor",
+            "Amazon Kendra"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaConnect",
+        "image": "./asset/Arch_AWS-Elemental-MediaConnect_64.svg",
+        "options": [
+            "AWS Parallel Computing Service",
+            "AWS Elemental MediaConnect",
+            "Amazon MQ",
+            "Amazon Pinpoint APIs"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaConvert",
+        "image": "./asset/Arch_AWS-Elemental-MediaConvert_64.svg",
+        "options": [
+            "AWS Elemental MediaPackage",
+            "AWS Migration Evaluator",
+            "AWS Elemental MediaConvert",
+            "AWS IoT Analytics"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaLive",
+        "image": "./asset/Arch_AWS-Elemental-MediaLive_64.svg",
+        "options": [
+            "AWS Elemental MediaLive",
+            "Amazon Kinesis Video Streams",
+            "AWS Elemental MediaStore",
+            "AWS Elemental MediaPackage"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaPackage",
+        "image": "./asset/Arch_AWS-Elemental-MediaPackage_64.svg",
+        "options": [
+            "Amazon GuardDuty",
+            "AWS Elemental Delta",
+            "AWS Elemental MediaPackage",
+            "AWS Elemental MediaStore"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaStore",
+        "image": "./asset/Arch_AWS-Elemental-MediaStore_64.svg",
+        "options": [
+            "AWS Elemental Link",
+            "Amazon Interactive Video Service",
+            "AWS Elemental MediaStore",
+            "AWS Shield"
+        ]
+    },
+    {
+        "name": "AWS Elemental MediaTailor",
+        "image": "./asset/Arch_AWS-Elemental-MediaTailor_64.svg",
+        "options": [
+            "Amazon Lex",
+            "AWS rePost Private",
+            "AWS Trusted Advisor",
+            "AWS Elemental MediaTailor"
+        ]
+    },
+    {
+        "name": "AWS Elemental Server",
+        "image": "./asset/Arch_AWS-Elemental-Server_64.svg",
+        "options": [
+            "AWS Management Console",
+            "AWS Glue DataBrew",
+            "AWS Elemental MediaLive",
+            "AWS Elemental Server"
+        ]
+    },
+    {
+        "name": "AWS End User Messaging",
+        "image": "./asset/Arch_AWS-End-User-Messaging_64.svg",
+        "options": [
+            "AWS End User Messaging",
+            "Amazon FinSpace",
+            "AWS CloudShell",
+            "AWS Apache MXNet on AWS"
+        ]
+    },
+    {
+        "name": "AWS Entity Resolution",
+        "image": "./asset/Arch_AWS-Entity-Resolution_64.svg",
+        "options": [
+            "AWS Entity Resolution",
+            "AWS App Runner",
+            "Amazon EKS Anywhere",
+            "Amazon Lookout for Metrics"
+        ]
+    },
+    {
+        "name": "AWS Express Workflows",
+        "image": "./asset/Arch_AWS-Express-Workflows_64.svg",
+        "options": [
+            "AWS Express Workflows",
+            "AWS Marketplace_Light",
+            "AWS Payment Cryptography",
+            "AWS PyTorch on AWS"
+        ]
+    },
+    {
+        "name": "AWS Fargate",
+        "image": "./asset/Arch_AWS-Fargate_64.svg",
+        "options": [
+            "AWS rePost",
+            "AWS Fargate",
+            "Amazon EFS",
+            "Amazon EC2 Image Builder"
+        ]
+    },
+    {
+        "name": "AWS Fault Injection Service",
+        "image": "./asset/Arch_AWS-Fault-Injection-Service_64.svg",
+        "options": [
+            "AWS Savings Plans",
+            "Amazon ECR",
+            "Amazon WorkDocs SDK",
+            "AWS Fault Injection Service"
+        ]
+    },
+    {
+        "name": "AWS Firewall Manager",
+        "image": "./asset/Arch_AWS-Firewall-Manager_64.svg",
+        "options": [
+            "AWS Firewall Manager",
+            "AWS Cloud Development Kit",
+            "Amazon WorkSpaces Family",
+            "AWS IoT Core"
+        ]
+    },
+    {
+        "name": "AWS Global Accelerator",
+        "image": "./asset/Arch_AWS-Global-Accelerator_64.svg",
+        "options": [
+            "AWS Global Accelerator",
+            "AWS Wavelength",
+            "Amazon Route 53",
+            "AWS rePost"
+        ]
+    },
+    {
+        "name": "AWS Glue DataBrew",
+        "image": "./asset/Arch_AWS-Glue-DataBrew_64.svg",
+        "options": [
+            "Amazon QuickSight",
+            "AWS Application Discovery Service",
+            "AWS Data Transfer Terminal",
+            "AWS Glue DataBrew"
+        ]
+    },
+    {
+        "name": "AWS Glue",
+        "image": "./asset/Arch_AWS-Glue_64.svg",
+        "options": [
+            "AWS Private Certificate Authority",
+            "AWS Backint Agent",
+            "AWS Glue",
+            "AWS Data Exchange"
+        ]
+    },
+    {
+        "name": "AWS Ground Station",
+        "image": "./asset/Arch_AWS-Ground-Station_64.svg",
+        "options": [
+            "AWS Ground Station",
+            "Amazon Location Service",
+            "AWS Distro for OpenTelemetry",
+            "AWS HealthImaging"
+        ]
+    },
+    {
+        "name": "AWS Health Dashboard",
+        "image": "./asset/Arch_AWS-Health-Dashboard_64.svg",
+        "options": [
+            "AWS Management Console",
+            "AWS HealthLake",
+            "AWS Health Dashboard",
+            "AWS Fault Injection Service"
+        ]
+    },
+    {
+        "name": "AWS HealthImaging",
+        "image": "./asset/Arch_AWS-HealthImaging_64.svg",
+        "options": [
+            "Amazon ECS Anywhere",
+            "AWS IoT TwinMaker",
+            "Amazon ECS",
+            "AWS HealthImaging"
+        ]
+    },
+    {
+        "name": "AWS HealthLake",
+        "image": "./asset/Arch_AWS-HealthLake_64.svg",
+        "options": [
+            "Amazon WorkDocs",
+            "AWS Elemental Appliances & Software",
+            "AWS Wavelength",
+            "AWS HealthLake"
+        ]
+    },
+    {
+        "name": "AWS HealthOmics",
+        "image": "./asset/Arch_AWS-HealthOmics_64.svg",
+        "options": [
+            "Amazon Cloud Directory",
+            "AWS HealthOmics",
+            "AWS Cloud Development Kit",
+            "AWS AppFabric"
+        ]
+    },
+    {
+        "name": "AWS HealthScribe",
+        "image": "./asset/Arch_AWS-HealthScribe_64.svg",
+        "options": [
+            "Amazon WorkDocs",
+            "Amazon Corretto",
+            "AWS HealthScribe",
+            "AWS Firewall Manager"
+        ]
+    },
+    {
+        "name": "AWS IAM Identity Center",
+        "image": "./asset/Arch_AWS-IAM-Identity-Center_64.svg",
+        "options": [
+            "AWS TensorFlow on AWS",
+            "AWS IAM Identity Center",
+            "AWS Shield",
+            "AWS Security Incident Response"
+        ]
+    },
+    {
+        "name": "AWS IQ",
+        "image": "./asset/Arch_AWS-IQ_64.svg",
+        "options": [
+            "AWS IQ",
+            "AWS Thinkbox Krakatoa",
+            "Amazon GameLift",
+            "AWS Parallel Computing Service"
+        ]
+    },
+    {
+        "name": "AWS IAM",
+        "image": "./asset/Arch_AWS-Identity-and-Access-Management_64.svg",
+        "options": [
+            "AWS Shield",
+            "AWS IAM",
+            "AWS Well Architected Tool",
+            "AWS Certificate Manager"
+        ]
+    },
+    {
+        "name": "AWS Infrastructure Composer",
+        "image": "./asset/Arch_AWS-Infrastructure-Composer_64.svg",
+        "options": [
+            "AWS SimSpace Weaver",
+            "AWS Infrastructure Composer",
+            "AWS Site to Site VPN",
+            "Amazon Cloud Directory"
+        ]
+    },
+    {
+        "name": "AWS IoT Analytics",
+        "image": "./asset/Arch_AWS-IoT-Analytics_64.svg",
+        "options": [
+            "AWS Data Transfer Terminal",
+            "AWS IoT Analytics",
+            "AWS Parallel Computing Service",
+            "Amazon EKS Anywhere"
+        ]
+    },
+    {
+        "name": "AWS IoT Button",
+        "image": "./asset/Arch_AWS-IoT-Button_64.svg",
+        "options": [
+            "AWS IoT SiteWise",
+            "AWS FreeRTOS",
+            "Amazon Fraud Detector",
+            "AWS IoT Button"
+        ]
+    },
+    {
+        "name": "AWS IoT Core",
+        "image": "./asset/Arch_AWS-IoT-Core_64.svg",
+        "options": [
+            "AWS IoT Core",
+            "AWS Thinkbox Stoke",
+            "AWS IoT Greengrass",
+            "AWS Payment Cryptography"
+        ]
+    },
+    {
+        "name": "AWS IoT Device Defender",
+        "image": "./asset/Arch_AWS-IoT-Device-Defender_64.svg",
+        "options": [
+            "AWS IoT Device Defender",
+            "AWS IoT FleetWise",
+            "AWS IoT TwinMaker",
+            "Amazon Braket"
+        ]
+    },
+    {
+        "name": "AWS IoT Device Management",
+        "image": "./asset/Arch_AWS-IoT-Device-Management_64.svg",
+        "options": [
+            "AWS IoT Events",
+            "AWS IoT SiteWise",
+            "AWS IoT Device Management",
+            "AWS IoT Core"
+        ]
+    },
+    {
+        "name": "AWS IoT Events",
+        "image": "./asset/Arch_AWS-IoT-Events_64.svg",
+        "options": [
+            "AWS IoT Device Management",
+            "AWS Signer",
+            "AWS IoT Events",
+            "Amazon Macie"
+        ]
+    },
+    {
+        "name": "AWS IoT ExpressLink",
+        "image": "./asset/Arch_AWS-IoT-ExpressLink_64.svg",
+        "options": [
+            "AWS IoT Device Management",
+            "AWS Infrastructure Composer",
+            "AWS IoT ExpressLink",
+            "AWS IoT FleetWise"
+        ]
+    },
+    {
+        "name": "AWS IoT FleetWise",
+        "image": "./asset/Arch_AWS-IoT-FleetWise_64.svg",
+        "options": [
+            "AWS IoT Button",
+            "AWS IoT FleetWise",
+            "Amazon Transcribe",
+            "AWS FreeRTOS"
+        ]
+    },
+    {
+        "name": "AWS IoT Greengrass",
+        "image": "./asset/Arch_AWS-IoT-Greengrass_64.svg",
+        "options": [
+            "AWS IoT Greengrass",
+            "AWS Elastic Fabric Adapter",
+            "AWS IoT Core",
+            "AWS IoT Button"
+        ]
+    },
+    {
+        "name": "AWS IoT SiteWise",
+        "image": "./asset/Arch_AWS-IoT-SiteWise_64.svg",
+        "options": [
+            "AWS Cloud Map",
+            "AWS IoT SiteWise",
+            "AWS IoT ExpressLink",
+            "AWS IoT Device Defender"
+        ]
+    },
+    {
+        "name": "AWS IoT TwinMaker",
+        "image": "./asset/Arch_AWS-IoT-TwinMaker_64.svg",
+        "options": [
+            "AWS IoT FleetWise",
+            "Amazon Managed Service for Prometheus",
+            "AWS CodePipeline",
+            "AWS IoT TwinMaker"
+        ]
+    },
+    {
+        "name": "AWS KMS",
+        "image": "./asset/Arch_AWS-Key-Management-Service_64.svg",
+        "options": [
+            "AWS Directory Service",
+            "AWS KMS",
+            "AWS IAM",
+            "AWS Elemental Appliances & Software"
+        ]
+    },
+    {
+        "name": "AWS Lake Formation",
+        "image": "./asset/Arch_AWS-Lake-Formation_64.svg",
+        "options": [
+            "Amazon MemoryDB",
+            "AWS Lake Formation",
+            "Amazon Q",
+            "AWS Telco Network Builder"
+        ]
+    },
+    {
+        "name": "AWS Lambda",
+        "image": "./asset/Arch_AWS-Lambda_64.svg",
+        "options": [
+            "AWS Elastic Beanstalk",
+            "AWS Managed Services",
+            "AWS Security Hub",
+            "AWS Lambda"
+        ]
+    },
+    {
+        "name": "AWS Launch Wizard",
+        "image": "./asset/Arch_AWS-Launch-Wizard_64.svg",
+        "options": [
+            "AWS Launch Wizard",
+            "AWS Glue",
+            "AWS CloudHSM",
+            "AWS Amplify"
+        ]
+    },
+    {
+        "name": "AWS License Manager",
+        "image": "./asset/Arch_AWS-License-Manager_64.svg",
+        "options": [
+            "AWS License Manager",
+            "AWS AppConfig",
+            "AWS Supply Chain",
+            "AWS Config"
+        ]
+    },
+    {
+        "name": "AWS Local Zones",
+        "image": "./asset/Arch_AWS-Local-Zones_64.svg",
+        "options": [
+            "AWS Security Hub",
+            "AWS Local Zones",
+            "AWS Red Hat OpenShift Service on AWS",
+            "AWS Professional Services"
+        ]
+    },
+    {
+        "name": "AWS Mainframe Modernization",
+        "image": "./asset/Arch_AWS-Mainframe-Modernization_64.svg",
+        "options": [
+            "Alexa For Business",
+            "AWS Security Hub",
+            "AWS Elemental Server",
+            "AWS Mainframe Modernization"
+        ]
+    },
+    {
+        "name": "AWS Managed Services",
+        "image": "./asset/Arch_AWS-Managed-Services_64.svg",
+        "options": [
+            "AWS Managed Services",
+            "AWS Thinkbox Stoke",
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS Elemental Delta"
+        ]
+    },
+    {
+        "name": "AWS Management Console",
+        "image": "./asset/Arch_AWS-Management-Console_64.svg",
+        "options": [
+            "AWS TensorFlow on AWS",
+            "AWS Management Console",
+            "AWS Thinkbox Deadline",
+            "Amazon SES"
+        ]
+    },
+    {
+        "name": "AWS Marketplace_Dark",
+        "image": "./asset/Arch_AWS-Marketplace_Dark_64.svg",
+        "options": [
+            "Amazon Managed Service for Apache Flink",
+            "AWS Verified Access",
+            "AWS PrivateLink",
+            "AWS Marketplace_Dark"
+        ]
+    },
+    {
+        "name": "AWS Marketplace_Light",
+        "image": "./asset/Arch_AWS-Marketplace_Light_64.svg",
+        "options": [
+            "AWS Marketplace_Light",
+            "AWS Elastic Load Balancing",
+            "AWS Certificate Manager",
+            "AWS Telco Network Builder"
+        ]
+    },
+    {
+        "name": "AWS Migration Evaluator",
+        "image": "./asset/Arch_AWS-Migration-Evaluator_64.svg",
+        "options": [
+            "Amazon Managed Streaming for Apache Kafka",
+            "Amazon Managed Service for Prometheus",
+            "AWS Migration Hub",
+            "AWS Migration Evaluator"
+        ]
+    },
+    {
+        "name": "AWS Migration Hub",
+        "image": "./asset/Arch_AWS-Migration-Hub_64.svg",
+        "options": [
+            "AWS Migration Hub",
+            "AWS rePost",
+            "AWS DeepLens",
+            "Amazon AppStream 2"
+        ]
+    },
+    {
+        "name": "AWS Network Firewall",
+        "image": "./asset/Arch_AWS-Network-Firewall_64.svg",
+        "options": [
+            "Amazon Elastic Inference",
+            "Amazon Timestream",
+            "AWS Thinkbox Stoke",
+            "AWS Network Firewall"
+        ]
+    },
+    {
+        "name": "AWS Neuron",
+        "image": "./asset/Arch_AWS-Neuron_64.svg",
+        "options": [
+            "AWS Serverless Application Repository",
+            "AWS Neuron",
+            "AWS rePost",
+            "AWS Elastic Beanstalk"
+        ]
+    },
+    {
+        "name": "AWS Nitro Enclaves",
+        "image": "./asset/Arch_AWS-Nitro-Enclaves_64.svg",
+        "options": [
+            "AWS Nitro Enclaves",
+            "Amazon File Cache",
+            "AWS IoT Events",
+            "AWS Billing Conductor"
+        ]
+    },
+    {
+        "name": "AWS Organizations",
+        "image": "./asset/Arch_AWS-Organizations_64.svg",
+        "options": [
+            "Amazon CloudWatch",
+            "AWS Organizations",
+            "AWS Lambda",
+            "AWS AppConfig"
+        ]
+    },
+    {
+        "name": "AWS Outposts family",
+        "image": "./asset/Arch_AWS-Outposts-family_64.svg",
+        "options": [
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS Elemental Conductor",
+            "AWS PyTorch on AWS",
+            "AWS Outposts family"
+        ]
+    },
+    {
+        "name": "AWS Outposts rack",
+        "image": "./asset/Arch_AWS-Outposts-rack_64.svg",
+        "options": [
+            "AWS Wickr",
+            "Amazon Timestream",
+            "AWS Outposts rack",
+            "AWS AppSync"
+        ]
+    },
+    {
+        "name": "AWS Outposts servers",
+        "image": "./asset/Arch_AWS-Outposts-servers_64.svg",
+        "options": [
+            "AWS Outposts servers",
+            "Amazon WorkSpaces Family",
+            "AWS Elastic Disaster Recovery",
+            "AWS Firewall Manager"
+        ]
+    },
+    {
+        "name": "AWS Panorama",
+        "image": "./asset/Arch_AWS-Panorama_64.svg",
+        "options": [
+            "AWS Open 3D Engine",
+            "AWS Panorama",
+            "Amazon Lightsail",
+            "Amazon FinSpace"
+        ]
+    },
+    {
+        "name": "AWS Parallel Cluster",
+        "image": "./asset/Arch_AWS-Parallel-Cluster_64.svg",
+        "options": [
+            "AWS Parallel Cluster",
+            "AWS CodeCommit",
+            "AWS Network Firewall",
+            "AWS HealthLake"
+        ]
+    },
+    {
+        "name": "AWS Parallel Computing Service",
+        "image": "./asset/Arch_AWS-Parallel-Computing-Service_64.svg",
+        "options": [
+            "AWS Thinkbox Sequoia",
+            "AWS Activate",
+            "AWS Parallel Computing Service",
+            "AWS Thinkbox Deadline"
+        ]
+    },
+    {
+        "name": "AWS Payment Cryptography",
+        "image": "./asset/Arch_AWS-Payment-Cryptography_64.svg",
+        "options": [
+            "AWS Payment Cryptography",
+            "Amazon AppStream 2",
+            "Amazon CloudSearch",
+            "Amazon Transcribe"
+        ]
+    },
+    {
+        "name": "AWS Private 5G",
+        "image": "./asset/Arch_AWS-Private-5G_64.svg",
+        "options": [
+            "AWS Apache MXNet on AWS",
+            "AWS Private 5G",
+            "Amazon DCV",
+            "AWS Resilience Hub"
+        ]
+    },
+    {
+        "name": "AWS Private Certificate Authority",
+        "image": "./asset/Arch_AWS-Private-Certificate-Authority_64.svg",
+        "options": [
+            "Amazon EKS Anywhere",
+            "AWS Private Certificate Authority",
+            "Amazon DCV",
+            "AWS Elastic Fabric Adapter"
+        ]
+    },
+    {
+        "name": "AWS PrivateLink",
+        "image": "./asset/Arch_AWS-PrivateLink_64.svg",
+        "options": [
+            "AWS Reserved Instance Reporting",
+            "AWS Wickr",
+            "Amazon VPC Lattice",
+            "AWS PrivateLink"
+        ]
+    },
+    {
+        "name": "AWS Professional Services",
+        "image": "./asset/Arch_AWS-Professional-Services_64.svg",
+        "options": [
+            "AWS HealthScribe",
+            "Amazon EKS Distro",
+            "AWS Professional Services",
+            "AWS App Studio"
+        ]
+    },
+    {
+        "name": "AWS Proton",
+        "image": "./asset/Arch_AWS-Proton_64.svg",
+        "options": [
+            "AWS Proton",
+            "Amazon Application Recovery Controller",
+            "AWS Console Mobile Application",
+            "Amazon ECS"
+        ]
+    },
+    {
+        "name": "AWS Resilience Hub",
+        "image": "./asset/Arch_AWS-Resilience-Hub_64.svg",
+        "options": [
+            "AWS Resilience Hub",
+            "AWS CodeDeploy",
+            "AWS Artifact",
+            "AWS PyTorch on AWS"
+        ]
+    },
+    {
+        "name": "AWS Resource Access Manager",
+        "image": "./asset/Arch_AWS-Resource-Access-Manager_64.svg",
+        "options": [
+            "Amazon FSx for NetApp ONTAP",
+            "AWS Deep Learning AMIs",
+            "AWS Device Farm",
+            "AWS Resource Access Manager"
+        ]
+    },
+    {
+        "name": "AWS Resource Explorer",
+        "image": "./asset/Arch_AWS-Resource-Explorer_64.svg",
+        "options": [
+            "AWS Well Architected Tool",
+            "AWS Auto Scaling",
+            "AWS Application Discovery Service",
+            "AWS Resource Explorer"
+        ]
+    },
+    {
+        "name": "AWS RoboMaker",
+        "image": "./asset/Arch_AWS-RoboMaker_64.svg",
+        "options": [
+            "AWS IoT FleetWise",
+            "AWS RoboMaker",
+            "AWS IoT Device Defender",
+            "AWS Private 5G"
+        ]
+    },
+    {
+        "name": "AWS Secrets Manager",
+        "image": "./asset/Arch_AWS-Secrets-Manager_64.svg",
+        "options": [
+            "AWS Config",
+            "AWS Secrets Manager",
+            "Amazon Corretto",
+            "AWS IAM Identity Center"
+        ]
+    },
+    {
+        "name": "AWS Security Hub",
+        "image": "./asset/Arch_AWS-Security-Hub_64.svg",
+        "options": [
+            "AWS Shield",
+            "AWS Security Hub",
+            "Amazon Keyspaces",
+            "AWS Professional Services"
+        ]
+    },
+    {
+        "name": "AWS Security Incident Response",
+        "image": "./asset/Arch_AWS-Security-Incident-Response_64.svg",
+        "options": [
+            "Amazon GuardDuty",
+            "Amazon S3",
+            "AWS Security Incident Response",
+            "AWS KMS"
+        ]
+    },
+    {
+        "name": "AWS Serverless Application Repository",
+        "image": "./asset/Arch_AWS-Serverless-Application-Repository_64.svg",
+        "options": [
+            "Amazon Location Service",
+            "AWS Serverless Application Repository",
+            "AWS Verified Access",
+            "AWS Private Certificate Authority"
+        ]
+    },
+    {
+        "name": "AWS Service Catalog",
+        "image": "./asset/Arch_AWS-Service-Catalog_64.svg",
+        "options": [
+            "AWS Service Catalog",
+            "AWS License Manager",
+            "AWS Budgets",
+            "AWS Panorama"
+        ]
+    },
+    {
+        "name": "AWS Service Management Connector",
+        "image": "./asset/Arch_AWS-Service-Management-Connector_64.svg",
+        "options": [
+            "Amazon Connect",
+            "AWS Service Management Connector",
+            "Amazon SQS",
+            "AWS Artifact"
+        ]
+    },
+    {
+        "name": "AWS Shield",
+        "image": "./asset/Arch_AWS-Shield_64.svg",
+        "options": [
+            "AWS Shield",
+            "AWS Snowball",
+            "Amazon MemoryDB",
+            "Amazon Cognito"
+        ]
+    },
+    {
+        "name": "AWS Signer",
+        "image": "./asset/Arch_AWS-Signer_64.svg",
+        "options": [
+            "AWS Network Firewall",
+            "AWS Elemental MediaStore",
+            "AWS PrivateLink",
+            "AWS Signer"
+        ]
+    },
+    {
+        "name": "AWS SimSpace Weaver",
+        "image": "./asset/Arch_AWS-SimSpace-Weaver_64.svg",
+        "options": [
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS SimSpace Weaver",
+            "AWS NICE EnginFrame",
+            "AWS Application Migration Service"
+        ]
+    },
+    {
+        "name": "AWS Site to Site VPN",
+        "image": "./asset/Arch_AWS-Site-to-Site-VPN_64.svg",
+        "options": [
+            "Amazon ElastiCache",
+            "AWS Well Architected Tool",
+            "AWS Site to Site VPN",
+            "AWS PrivateLink"
+        ]
+    },
+    {
+        "name": "AWS Snowball Edge",
+        "image": "./asset/Arch_AWS-Snowball-Edge_64.svg",
+        "options": [
+            "AWS Snowball Edge",
+            "Amazon S3",
+            "AWS Serverless Application Repository",
+            "Amazon FSx for WFS"
+        ]
+    },
+    {
+        "name": "AWS Snowball",
+        "image": "./asset/Arch_AWS-Snowball_64.svg",
+        "options": [
+            "Amazon Simple Storage Service Glacier",
+            "Amazon FSx for Lustre",
+            "AWS Snowball",
+            "AWS Distro for OpenTelemetry"
+        ]
+    },
+    {
+        "name": "AWS Step Functions",
+        "image": "./asset/Arch_AWS-Step-Functions_64.svg",
+        "options": [
+            "Amazon VPC Lattice",
+            "Amazon CloudSearch",
+            "Amazon ECS",
+            "AWS Step Functions"
+        ]
+    },
+    {
+        "name": "AWS Storage Gateway",
+        "image": "./asset/Arch_AWS-Storage-Gateway_64.svg",
+        "options": [
+            "AWS Storage Gateway",
+            "Amazon FSx for WFS",
+            "Amazon Interactive Video Service",
+            "AWS Snowball Edge"
+        ]
+    },
+    {
+        "name": "AWS Supply Chain",
+        "image": "./asset/Arch_AWS-Supply-Chain_64.svg",
+        "options": [
+            "AWS Elemental MediaTailor",
+            "Amazon Monitron",
+            "AWS Supply Chain",
+            "AWS Outposts family"
+        ]
+    },
+    {
+        "name": "AWS Support",
+        "image": "./asset/Arch_AWS-Support_64.svg",
+        "options": [
+            "AWS Support",
+            "AWS Systems Manager",
+            "Amazon Kinesis Video Streams",
+            "AWS CloudTrail"
+        ]
+    },
+    {
+        "name": "AWS Systems Manager",
+        "image": "./asset/Arch_AWS-Systems-Manager_64.svg",
+        "options": [
+            "AWS Budgets",
+            "AWS Systems Manager",
+            "AWS CloudFormation",
+            "AWS Client VPN"
+        ]
+    },
+    {
+        "name": "AWS Telco Network Builder",
+        "image": "./asset/Arch_AWS-Telco-Network-Builder_64.svg",
+        "options": [
+            "AWS Telco Network Builder",
+            "Amazon Security Lake",
+            "AWS Professional Services",
+            "AWS Elemental MediaPackage"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox Deadline",
+        "image": "./asset/Arch_AWS-Thinkbox-Deadline_64.svg",
+        "options": [
+            "AWS Thinkbox Deadline",
+            "AWS Lake Formation",
+            "Amazon FinSpace",
+            "AWS Deep Learning AMIs"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox Frost",
+        "image": "./asset/Arch_AWS-Thinkbox-Frost_64.svg",
+        "options": [
+            "Amazon Detective",
+            "AWS Thinkbox Frost",
+            "AWS Application Migration Service",
+            "AWS Marketplace_Dark"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox Krakatoa",
+        "image": "./asset/Arch_AWS-Thinkbox-Krakatoa_64.svg",
+        "options": [
+            "Amazon Simple Storage Service Glacier",
+            "AWS Elastic Disaster Recovery",
+            "AWS Thinkbox Krakatoa",
+            "Amazon Detective"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox Sequoia",
+        "image": "./asset/Arch_AWS-Thinkbox-Sequoia_64.svg",
+        "options": [
+            "AWS Network Firewall",
+            "Amazon Interactive Video Service",
+            "AWS Ground Station",
+            "AWS Thinkbox Sequoia"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox Stoke",
+        "image": "./asset/Arch_AWS-Thinkbox-Stoke_64.svg",
+        "options": [
+            "AWS Parallel Computing Service",
+            "AWS Thinkbox Stoke",
+            "AWS rePost Private",
+            "AWS Backint Agent"
+        ]
+    },
+    {
+        "name": "AWS Thinkbox XMesh",
+        "image": "./asset/Arch_AWS-Thinkbox-XMesh_64.svg",
+        "options": [
+            "AWS PyTorch on AWS",
+            "AWS Thinkbox XMesh",
+            "AWS Managed Services",
+            "AWS Outposts servers"
+        ]
+    },
+    {
+        "name": "AWS Tools and SDKs",
+        "image": "./asset/Arch_AWS-Tools-and-SDKs_64.svg",
+        "options": [
+            "AWS CodeCommit",
+            "AWS Elemental MediaConvert",
+            "AWS Tools and SDKs",
+            "AWS Express Workflows"
+        ]
+    },
+    {
+        "name": "AWS Training Certification",
+        "image": "./asset/Arch_AWS-Training-Certification_64.svg",
+        "options": [
+            "AWS Training Certification",
+            "Amazon Chime",
+            "AWS AppSync",
+            "AWS Supply Chain"
+        ]
+    },
+    {
+        "name": "AWS Transfer Family",
+        "image": "./asset/Arch_AWS-Transfer-Family_64.svg",
+        "options": [
+            "AWS Transfer Family",
+            "AWS Cloud Map",
+            "AWS Secrets Manager",
+            "AWS Marketplace_Dark"
+        ]
+    },
+    {
+        "name": "AWS Transit Gateway",
+        "image": "./asset/Arch_AWS-Transit-Gateway_64.svg",
+        "options": [
+            "AWS Cloud WAN",
+            "AWS Transit Gateway",
+            "Amazon Fraud Detector",
+            "Amazon Lookout for Equipment"
+        ]
+    },
+    {
+        "name": "AWS Trusted Advisor",
+        "image": "./asset/Arch_AWS-Trusted-Advisor_64.svg",
+        "options": [
+            "AWS Clean Rooms",
+            "AWS Trusted Advisor",
+            "AWS Organizations",
+            "AWS Config"
+        ]
+    },
+    {
+        "name": "AWS User Notifications",
+        "image": "./asset/Arch_AWS-User-Notifications_64.svg",
+        "options": [
+            "Amazon EKS",
+            "Amazon EC2 Image Builder",
+            "Amazon Pinpoint APIs",
+            "AWS User Notifications"
+        ]
+    },
+    {
+        "name": "AWS Verified Access",
+        "image": "./asset/Arch_AWS-Verified-Access_64.svg",
+        "options": [
+            "AWS User Notifications",
+            "AWS Command Line Interface",
+            "AWS Fargate",
+            "AWS Verified Access"
+        ]
+    },
+    {
+        "name": "AWS WAF",
+        "image": "./asset/Arch_AWS-WAF_64.svg",
+        "options": [
+            "AWS WAF",
+            "Amazon SageMaker Ground Truth",
+            "AWS Security Hub",
+            "Amazon Cognito"
+        ]
+    },
+    {
+        "name": "AWS Wavelength",
+        "image": "./asset/Arch_AWS-Wavelength_64.svg",
+        "options": [
+            "Amazon Timestream",
+            "AWS Wavelength",
+            "AWS Fault Injection Service",
+            "AWS Management Console"
+        ]
+    },
+    {
+        "name": "AWS Well Architected Tool",
+        "image": "./asset/Arch_AWS-Well-Architected-Tool_64.svg",
+        "options": [
+            "Amazon Application Recovery Controller",
+            "AWS Well Architected Tool",
+            "Amazon Verified Permissions",
+            "Amazon EC2 Image Builder"
+        ]
+    },
+    {
+        "name": "AWS Wickr",
+        "image": "./asset/Arch_AWS-Wickr_64.svg",
+        "options": [
+            "AWS Professional Services",
+            "Amazon Managed Grafana",
+            "AWS Wickr",
+            "AWS X Ray"
+        ]
+    },
+    {
+        "name": "AWS X Ray",
+        "image": "./asset/Arch_AWS-X-Ray_64.svg",
+        "options": [
+            "AWS Cost Explorer",
+            "AWS Device Farm",
+            "AWS X Ray",
+            "AWS DataSync"
+        ]
+    },
+    {
+        "name": "AWS rePost Private",
+        "image": "./asset/Arch_AWS-rePost-Private_64.svg",
+        "options": [
+            "AWS Clean Rooms",
+            "AWS rePost Private",
+            "Amazon VPC",
+            "AWS PyTorch on AWS"
+        ]
+    },
+    {
+        "name": "AWS rePost",
+        "image": "./asset/Arch_AWS-rePost_64.svg",
+        "options": [
+            "AWS rePost",
+            "Amazon CodeGuru",
+            "AWS Cloud Map",
+            "Amazon Location Service"
+        ]
+    },
+    {
+        "name": "Alexa For Business",
+        "image": "./asset/Arch_Alexa-For-Business_64.svg",
+        "options": [
+            "Alexa For Business",
+            "AWS Mainframe Modernization",
+            "Amazon Transcribe",
+            "AWS Elemental MediaTailor"
+        ]
+    },
+    {
+        "name": "Amazon API Gateway",
+        "image": "./asset/Arch_Amazon-API-Gateway_64.svg",
+        "options": [
+            "Amazon Translate",
+            "AWS Entity Resolution",
+            "Amazon API Gateway",
+            "Amazon Aurora"
+        ]
+    },
+    {
+        "name": "Amazon AppFlow",
+        "image": "./asset/Arch_Amazon-AppFlow_64.svg",
+        "options": [
+            "Amazon VPC Lattice",
+            "Amazon Managed Grafana",
+            "Amazon VPC",
+            "Amazon AppFlow"
+        ]
+    },
+    {
+        "name": "Amazon AppStream 2",
+        "image": "./asset/Arch_Amazon-AppStream-2_64.svg",
+        "options": [
+            "AWS Thinkbox XMesh",
+            "Amazon AppStream 2",
+            "AWS Migration Evaluator",
+            "AWS Service Catalog"
+        ]
+    },
+    {
+        "name": "Amazon Application Recovery Controller",
+        "image": "./asset/Arch_Amazon-Application-Recovery-Controller_64.svg",
+        "options": [
+            "AWS HealthScribe",
+            "Amazon WorkDocs",
+            "Amazon EC2",
+            "Amazon Application Recovery Controller"
+        ]
+    },
+    {
+        "name": "Amazon Athena",
+        "image": "./asset/Arch_Amazon-Athena_64.svg",
+        "options": [
+            "Amazon Athena",
+            "AWS Managed Services",
+            "AWS Oracle Database at AWS",
+            "Amazon Cognito"
+        ]
+    },
+    {
+        "name": "Amazon Augmented AI A2I",
+        "image": "./asset/Arch_Amazon-Augmented-AI-A2I_64.svg",
+        "options": [
+            "Amazon Monitron",
+            "AWS Thinkbox XMesh",
+            "AWS Verified Access",
+            "Amazon Augmented AI A2I"
+        ]
+    },
+    {
+        "name": "Amazon Aurora",
+        "image": "./asset/Arch_Amazon-Aurora_64.svg",
+        "options": [
+            "Amazon Aurora",
+            "Amazon DocumentDB",
+            "AWS Console Mobile Application",
+            "AWS Serverless Application Repository"
+        ]
+    },
+    {
+        "name": "Amazon Bedrock",
+        "image": "./asset/Arch_Amazon-Bedrock_64.svg",
+        "options": [
+            "AWS Serverless Application Repository",
+            "Amazon Bedrock",
+            "Amazon Rekognition",
+            "Amazon SageMaker Ground Truth"
+        ]
+    },
+    {
+        "name": "Amazon Braket",
+        "image": "./asset/Arch_Amazon-Braket_64.svg",
+        "options": [
+            "Amazon Braket",
+            "Amazon AppFlow",
+            "AWS Direct Connect",
+            "Amazon Elastic VMware Service"
+        ]
+    },
+    {
+        "name": "Amazon Chime SDK",
+        "image": "./asset/Arch_Amazon-Chime-SDK_64.svg",
+        "options": [
+            "AWS Elemental MediaConnect",
+            "Amazon Chime",
+            "Amazon EC2 Auto Scaling",
+            "Amazon Chime SDK"
+        ]
+    },
+    {
+        "name": "Amazon Chime",
+        "image": "./asset/Arch_Amazon-Chime_64.svg",
+        "options": [
+            "AWS Professional Services",
+            "Amazon Chime",
+            "Amazon Chime SDK",
+            "AWS User Notifications"
+        ]
+    },
+    {
+        "name": "Amazon Cloud Directory",
+        "image": "./asset/Arch_Amazon-Cloud-Directory_64.svg",
+        "options": [
+            "Amazon Elastic VMware Service",
+            "Amazon Cloud Directory",
+            "AWS IQ",
+            "AWS Savings Plans"
+        ]
+    },
+    {
+        "name": "Amazon CloudFront",
+        "image": "./asset/Arch_Amazon-CloudFront_64.svg",
+        "options": [
+            "AWS Transit Gateway",
+            "AWS Cloud WAN",
+            "Amazon CloudFront",
+            "AWS Chatbot"
+        ]
+    },
+    {
+        "name": "Amazon CloudSearch",
+        "image": "./asset/Arch_Amazon-CloudSearch_64.svg",
+        "options": [
+            "Amazon CloudSearch",
+            "AWS Wickr",
+            "AWS Elastic Fabric Adapter",
+            "Amazon Elastic VMware Service"
+        ]
+    },
+    {
+        "name": "Amazon CloudWatch",
+        "image": "./asset/Arch_Amazon-CloudWatch_64.svg",
+        "options": [
+            "AWS Application Migration Service",
+            "AWS Budgets",
+            "Amazon CloudWatch",
+            "AWS Cost and Usage Report"
+        ]
+    },
+    {
+        "name": "Amazon CodeCatalyst",
+        "image": "./asset/Arch_Amazon-CodeCatalyst_64.svg",
+        "options": [
+            "Amazon CodeCatalyst",
+            "Amazon Managed Service for Prometheus",
+            "AWS Device Farm",
+            "AWS Deadline Cloud"
+        ]
+    },
+    {
+        "name": "Amazon CodeGuru",
+        "image": "./asset/Arch_Amazon-CodeGuru_64.svg",
+        "options": [
+            "AWS Thinkbox Stoke",
+            "Amazon CodeGuru",
+            "AWS rePost",
+            "Amazon ECS"
+        ]
+    },
+    {
+        "name": "Amazon CodeWhisperer",
+        "image": "./asset/Arch_Amazon-CodeWhisperer_64.svg",
+        "options": [
+            "Amazon CodeWhisperer",
+            "Amazon SageMaker AI",
+            "Amazon Pinpoint",
+            "AWS Fault Injection Service"
+        ]
+    },
+    {
+        "name": "Amazon Cognito",
+        "image": "./asset/Arch_Amazon-Cognito_64.svg",
+        "options": [
+            "AWS IAM",
+            "AWS Entity Resolution",
+            "Amazon Cognito",
+            "AWS DeepComposer"
+        ]
+    },
+    {
+        "name": "Amazon Comprehend Medical",
+        "image": "./asset/Arch_Amazon-Comprehend-Medical_64.svg",
+        "options": [
+            "Amazon Comprehend Medical",
+            "AWS DeepLens",
+            "AWS Infrastructure Composer",
+            "Amazon Managed Streaming for Apache Kafka"
+        ]
+    },
+    {
+        "name": "Amazon Comprehend",
+        "image": "./asset/Arch_Amazon-Comprehend_64.svg",
+        "options": [
+            "Amazon FSx",
+            "AWS Training Certification",
+            "Amazon Lookout for Vision",
+            "Amazon Comprehend"
+        ]
+    },
+    {
+        "name": "Amazon Connect",
+        "image": "./asset/Arch_Amazon-Connect_64.svg",
+        "options": [
+            "Amazon Chime",
+            "Amazon Connect",
+            "AWS Cloud9",
+            "Amazon SES"
+        ]
+    },
+    {
+        "name": "Amazon Corretto",
+        "image": "./asset/Arch_Amazon-Corretto_64.svg",
+        "options": [
+            "AWS Budgets",
+            "Amazon Q",
+            "Amazon WorkSpaces Family",
+            "Amazon Corretto"
+        ]
+    },
+    {
+        "name": "Amazon DCV",
+        "image": "./asset/Arch_Amazon-DCV_64.svg",
+        "options": [
+            "AWS TensorFlow on AWS",
+            "Amazon DCV",
+            "AWS Device Farm",
+            "Amazon Personalize"
+        ]
+    },
+    {
+        "name": "Amazon Data Firehose",
+        "image": "./asset/Arch_Amazon-Data-Firehose_64.svg",
+        "options": [
+            "Amazon EMR",
+            "Amazon Lookout for Metrics",
+            "Amazon Data Firehose",
+            "AWS Glue"
+        ]
+    },
+    {
+        "name": "Amazon DataZone",
+        "image": "./asset/Arch_Amazon-DataZone_64.svg",
+        "options": [
+            "Amazon OpenSearch Service",
+            "AWS Cost Explorer",
+            "Amazon DataZone",
+            "Amazon EMR"
+        ]
+    },
+    {
+        "name": "Amazon Detective",
+        "image": "./asset/Arch_Amazon-Detective_64.svg",
+        "options": [
+            "Amazon Detective",
+            "Amazon CloudFront",
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS Launch Wizard"
+        ]
+    },
+    {
+        "name": "Amazon DevOps Guru",
+        "image": "./asset/Arch_Amazon-DevOps-Guru_64.svg",
+        "options": [
+            "AWS Billing Conductor",
+            "AWS rePost Private",
+            "Amazon AppStream 2",
+            "Amazon DevOps Guru"
+        ]
+    },
+    {
+        "name": "Amazon DocumentDB",
+        "image": "./asset/Arch_Amazon-DocumentDB_64.svg",
+        "options": [
+            "Amazon Neptune",
+            "AWS Fargate",
+            "Amazon DocumentDB",
+            "Amazon Timestream"
+        ]
+    },
+    {
+        "name": "Amazon DynamoDB",
+        "image": "./asset/Arch_Amazon-DynamoDB_64.svg",
+        "options": [
+            "AWS Elemental MediaConnect",
+            "Amazon RDS",
+            "Amazon Neptune",
+            "Amazon DynamoDB"
+        ]
+    },
+    {
+        "name": "Amazon EC2 Auto Scaling",
+        "image": "./asset/Arch_Amazon-EC2-Auto-Scaling_64.svg",
+        "options": [
+            "Amazon EC2 Auto Scaling",
+            "AWS Compute Optimizer",
+            "Amazon Lightsail for Research",
+            "AWS Database Migration Service"
+        ]
+    },
+    {
+        "name": "Amazon EC2 Image Builder",
+        "image": "./asset/Arch_Amazon-EC2-Image-Builder_64.svg",
+        "options": [
+            "Amazon EC2 Image Builder",
+            "AWS Thinkbox XMesh",
+            "AWS IoT Analytics",
+            "AWS Lambda"
+        ]
+    },
+    {
+        "name": "Amazon EC2",
+        "image": "./asset/Arch_Amazon-EC2_64.svg",
+        "options": [
+            "AWS Elemental MediaTailor",
+            "AWS Glue DataBrew",
+            "AWS Elastic Beanstalk",
+            "Amazon EC2"
+        ]
+    },
+    {
+        "name": "Amazon ECS Anywhere",
+        "image": "./asset/Arch_Amazon-ECS-Anywhere_64.svg",
+        "options": [
+            "Amazon Cognito",
+            "AWS Elemental MediaConvert",
+            "Amazon ECS Anywhere",
+            "Amazon AppStream 2"
+        ]
+    },
+    {
+        "name": "Amazon EFS",
+        "image": "./asset/Arch_Amazon-EFS_64.svg",
+        "options": [
+            "Amazon FSx for OpenZFS",
+            "Amazon EFS",
+            "Amazon Simple Storage Service Glacier",
+            "AWS Clean Rooms"
+        ]
+    },
+    {
+        "name": "Amazon EKS Anywhere",
+        "image": "./asset/Arch_Amazon-EKS-Anywhere_64.svg",
+        "options": [
+            "Amazon EKS Anywhere",
+            "Amazon Nova",
+            "AWS Organizations",
+            "AWS Thinkbox Krakatoa"
+        ]
+    },
+    {
+        "name": "Amazon EKS Cloud",
+        "image": "./asset/Arch_Amazon-EKS-Cloud_64.svg",
+        "options": [
+            "Amazon EKS Cloud",
+            "AWS Apache MXNet on AWS",
+            "Amazon DCV",
+            "Amazon FSx"
+        ]
+    },
+    {
+        "name": "Amazon EKS Distro",
+        "image": "./asset/Arch_Amazon-EKS-Distro_64.svg",
+        "options": [
+            "AWS Elemental MediaStore",
+            "AWS Local Zones",
+            "Amazon EKS Distro",
+            "AWS Outposts family"
+        ]
+    },
+    {
+        "name": "Amazon EMR",
+        "image": "./asset/Arch_Amazon-EMR_64.svg",
+        "options": [
+            "AWS Oracle Database at AWS",
+            "AWS DataSync",
+            "AWS Snowball Edge",
+            "Amazon EMR"
+        ]
+    },
+    {
+        "name": "Amazon ElastiCache",
+        "image": "./asset/Arch_Amazon-ElastiCache_64.svg",
+        "options": [
+            "Amazon DynamoDB",
+            "Amazon Timestream",
+            "Amazon FSx for OpenZFS",
+            "Amazon ElastiCache"
+        ]
+    },
+    {
+        "name": "Amazon EBS",
+        "image": "./asset/Arch_Amazon-Elastic-Block-Store_64.svg",
+        "options": [
+            "Amazon EBS",
+            "AWS Backup",
+            "Amazon FSx for NetApp ONTAP",
+            "AWS Cloud9"
+        ]
+    },
+    {
+        "name": "Amazon ECR",
+        "image": "./asset/Arch_Amazon-Elastic-Container-Registry_64.svg",
+        "options": [
+            "AWS Console Mobile Application",
+            "Amazon CodeGuru",
+            "Amazon ECR",
+            "Amazon EKS Anywhere"
+        ]
+    },
+    {
+        "name": "Amazon ECS",
+        "image": "./asset/Arch_Amazon-Elastic-Container-Service_64.svg",
+        "options": [
+            "AWS Elemental MediaStore",
+            "AWS Entity Resolution",
+            "Amazon AppFlow",
+            "Amazon ECS"
+        ]
+    },
+    {
+        "name": "Amazon Elastic Inference",
+        "image": "./asset/Arch_Amazon-Elastic-Inference_64.svg",
+        "options": [
+            "Amazon Forecast",
+            "AWS Bottlerocket",
+            "AWS App Mesh",
+            "Amazon Elastic Inference"
+        ]
+    },
+    {
+        "name": "Amazon EKS",
+        "image": "./asset/Arch_Amazon-Elastic-Kubernetes-Service_64.svg",
+        "options": [
+            "Amazon S3",
+            "AWS Infrastructure Composer",
+            "Amazon EKS",
+            "Amazon S3 on Outposts"
+        ]
+    },
+    {
+        "name": "Amazon Elastic Transcoder",
+        "image": "./asset/Arch_Amazon-Elastic-Transcoder_64.svg",
+        "options": [
+            "Amazon Elastic Transcoder",
+            "AWS Elemental Conductor",
+            "AWS Cloud Control API",
+            "AWS Elemental Live"
+        ]
+    },
+    {
+        "name": "Amazon Elastic VMware Service",
+        "image": "./asset/Arch_Amazon-Elastic-VMware-Service_64.svg",
+        "options": [
+            "AWS Express Workflows",
+            "Amazon SageMaker",
+            "Amazon Monitron",
+            "Amazon Elastic VMware Service"
+        ]
+    },
+    {
+        "name": "Amazon EventBridge",
+        "image": "./asset/Arch_Amazon-EventBridge_64.svg",
+        "options": [
+            "AWS Activate",
+            "Amazon Chime",
+            "Amazon EventBridge",
+            "Amazon Elastic Transcoder"
+        ]
+    },
+    {
+        "name": "Amazon FSx for Lustre",
+        "image": "./asset/Arch_Amazon-FSx-for-Lustre_64.svg",
+        "options": [
+            "Amazon S3 on Outposts",
+            "Amazon Redshift",
+            "Amazon FSx for Lustre",
+            "AWS Cost Explorer"
+        ]
+    },
+    {
+        "name": "Amazon FSx for NetApp ONTAP",
+        "image": "./asset/Arch_Amazon-FSx-for-NetApp-ONTAP_64.svg",
+        "options": [
+            "Amazon Data Firehose",
+            "Amazon FSx for NetApp ONTAP",
+            "Amazon FSx for OpenZFS",
+            "AWS Backup"
+        ]
+    },
+    {
+        "name": "Amazon FSx for OpenZFS",
+        "image": "./asset/Arch_Amazon-FSx-for-OpenZFS_64.svg",
+        "options": [
+            "Amazon AppStream 2",
+            "Amazon FSx for OpenZFS",
+            "AWS Snowball Edge",
+            "Amazon S3"
+        ]
+    },
+    {
+        "name": "Amazon FSx for WFS",
+        "image": "./asset/Arch_Amazon-FSx-for-WFS_64.svg",
+        "options": [
+            "AWS Snowball",
+            "Amazon FSx for WFS",
+            "Amazon Bedrock",
+            "AWS Backup"
+        ]
+    },
+    {
+        "name": "Amazon FSx",
+        "image": "./asset/Arch_Amazon-FSx_64.svg",
+        "options": [
+            "Amazon FSx for NetApp ONTAP",
+            "AWS IoT Button",
+            "Amazon FSx",
+            "Amazon Simple Storage Service Glacier"
+        ]
+    },
+    {
+        "name": "Amazon File Cache",
+        "image": "./asset/Arch_Amazon-File-Cache_64.svg",
+        "options": [
+            "AWS KMS",
+            "AWS Clean Rooms",
+            "Amazon File Cache",
+            "AWS Thinkbox XMesh"
+        ]
+    },
+    {
+        "name": "Amazon FinSpace",
+        "image": "./asset/Arch_Amazon-FinSpace_64.svg",
+        "options": [
+            "Amazon ECR",
+            "AWS PrivateLink",
+            "AWS Elastic Fabric Adapter",
+            "Amazon FinSpace"
+        ]
+    },
+    {
+        "name": "Amazon Forecast",
+        "image": "./asset/Arch_Amazon-Forecast_64.svg",
+        "options": [
+            "AWS Wickr",
+            "Amazon Managed Workflows for Apache Airflow",
+            "Amazon Forecast",
+            "AWS DeepComposer"
+        ]
+    },
+    {
+        "name": "Amazon Fraud Detector",
+        "image": "./asset/Arch_Amazon-Fraud-Detector_64.svg",
+        "options": [
+            "Amazon Corretto",
+            "Amazon Polly",
+            "Amazon Fraud Detector",
+            "Amazon SageMaker Ground Truth"
+        ]
+    },
+    {
+        "name": "Amazon GameLift",
+        "image": "./asset/Arch_Amazon-GameLift_64.svg",
+        "options": [
+            "AWS Step Functions",
+            "Amazon DCV",
+            "Amazon GameLift",
+            "AWS Control Tower"
+        ]
+    },
+    {
+        "name": "Amazon GuardDuty",
+        "image": "./asset/Arch_Amazon-GuardDuty_64.svg",
+        "options": [
+            "AWS Support",
+            "AWS Shield",
+            "AWS User Notifications",
+            "Amazon GuardDuty"
+        ]
+    },
+    {
+        "name": "Amazon Inspector",
+        "image": "./asset/Arch_Amazon-Inspector_64.svg",
+        "options": [
+            "Amazon Inspector",
+            "Amazon Elastic Transcoder",
+            "AWS Security Incident Response",
+            "AWS KMS"
+        ]
+    },
+    {
+        "name": "Amazon Interactive Video Service",
+        "image": "./asset/Arch_Amazon-Interactive-Video-Service_64.svg",
+        "options": [
+            "AWS Elemental Appliances & Software",
+            "Amazon Interactive Video Service",
+            "AWS Elemental MediaPackage",
+            "Amazon Bedrock"
+        ]
+    },
+    {
+        "name": "Amazon Kendra",
+        "image": "./asset/Arch_Amazon-Kendra_64.svg",
+        "options": [
+            "Amazon Pinpoint",
+            "Amazon Cloud Directory",
+            "Amazon Kendra",
+            "Amazon Polly"
+        ]
+    },
+    {
+        "name": "Amazon Keyspaces",
+        "image": "./asset/Arch_Amazon-Keyspaces_64.svg",
+        "options": [
+            "Amazon Keyspaces",
+            "AWS CodeBuild",
+            "Amazon DynamoDB",
+            "Amazon Aurora"
+        ]
+    },
+    {
+        "name": "Amazon Kinesis Data Streams",
+        "image": "./asset/Arch_Amazon-Kinesis-Data-Streams_64.svg",
+        "options": [
+            "Amazon Kinesis Data Streams",
+            "AWS Data Exchange",
+            "Amazon Kinesis Video Streams",
+            "AWS Global Accelerator"
+        ]
+    },
+    {
+        "name": "Amazon Kinesis Video Streams",
+        "image": "./asset/Arch_Amazon-Kinesis-Video-Streams_64.svg",
+        "options": [
+            "Amazon Kinesis Video Streams",
+            "Amazon SageMaker Ground Truth",
+            "AWS Data Transfer Terminal",
+            "AWS Database Migration Service"
+        ]
+    },
+    {
+        "name": "Amazon Kinesis",
+        "image": "./asset/Arch_Amazon-Kinesis_64.svg",
+        "options": [
+            "Amazon Kinesis",
+            "AWS DataSync",
+            "AWS Auto Scaling",
+            "AWS IoT Analytics"
+        ]
+    },
+    {
+        "name": "Amazon Lex",
+        "image": "./asset/Arch_Amazon-Lex_64.svg",
+        "options": [
+            "Amazon Lex",
+            "Amazon File Cache",
+            "AWS Resource Access Manager",
+            "Amazon Fraud Detector"
+        ]
+    },
+    {
+        "name": "Amazon Lightsail for Research",
+        "image": "./asset/Arch_Amazon-Lightsail-for-Research_64.svg",
+        "options": [
+            "AWS Batch",
+            "AWS Elemental MediaTailor",
+            "AWS Elastic Beanstalk",
+            "Amazon Lightsail for Research"
+        ]
+    },
+    {
+        "name": "Amazon Lightsail",
+        "image": "./asset/Arch_Amazon-Lightsail_64.svg",
+        "options": [
+            "Amazon Athena",
+            "AWS Batch",
+            "AWS Lambda",
+            "Amazon Lightsail"
+        ]
+    },
+    {
+        "name": "Amazon Location Service",
+        "image": "./asset/Arch_Amazon-Location-Service_64.svg",
+        "options": [
+            "Amazon CloudFront",
+            "AWS Marketplace_Dark",
+            "Amazon Location Service",
+            "AWS Launch Wizard"
+        ]
+    },
+    {
+        "name": "Amazon Lookout for Equipment",
+        "image": "./asset/Arch_Amazon-Lookout-for-Equipment_64.svg",
+        "options": [
+            "Amazon Lookout for Equipment",
+            "Amazon Forecast",
+            "AWS Auto Scaling",
+            "Amazon Managed Streaming for Apache Kafka"
+        ]
+    },
+    {
+        "name": "Amazon Lookout for Metrics",
+        "image": "./asset/Arch_Amazon-Lookout-for-Metrics_64.svg",
+        "options": [
+            "Amazon Lookout for Metrics",
+            "AWS CodeArtifact",
+            "AWS Supply Chain",
+            "AWS DeepRacer"
+        ]
+    },
+    {
+        "name": "Amazon Lookout for Vision",
+        "image": "./asset/Arch_Amazon-Lookout-for-Vision_64.svg",
+        "options": [
+            "Amazon Rekognition",
+            "Amazon Lookout for Vision",
+            "AWS Elemental Live",
+            "AWS DeepLens"
+        ]
+    },
+    {
+        "name": "Amazon MQ",
+        "image": "./asset/Arch_Amazon-MQ_64.svg",
+        "options": [
+            "Amazon Pinpoint APIs",
+            "Amazon Quantum Ledger Database",
+            "Amazon MQ",
+            "Amazon SNS"
+        ]
+    },
+    {
+        "name": "Amazon Macie",
+        "image": "./asset/Arch_Amazon-Macie_64.svg",
+        "options": [
+            "AWS Security Hub",
+            "AWS Cloud9",
+            "Amazon Nova",
+            "Amazon Macie"
+        ]
+    },
+    {
+        "name": "Amazon Managed Blockchain",
+        "image": "./asset/Arch_Amazon-Managed-Blockchain_64.svg",
+        "options": [
+            "Amazon Managed Blockchain",
+            "Alexa For Business",
+            "AWS Migration Hub",
+            "Amazon Lookout for Metrics"
+        ]
+    },
+    {
+        "name": "Amazon Managed Grafana",
+        "image": "./asset/Arch_Amazon-Managed-Grafana_64.svg",
+        "options": [
+            "Amazon Timestream",
+            "AWS Resource Explorer",
+            "Amazon Managed Grafana",
+            "AWS IoT Greengrass"
+        ]
+    },
+    {
+        "name": "Amazon Managed Service for Apache Flink",
+        "image": "./asset/Arch_Amazon-Managed-Service-for-Apache-Flink_64.svg",
+        "options": [
+            "AWS HealthOmics",
+            "AWS Reserved Instance Reporting",
+            "Amazon Managed Service for Apache Flink",
+            "AWS TensorFlow on AWS"
+        ]
+    },
+    {
+        "name": "Amazon Managed Service for Prometheus",
+        "image": "./asset/Arch_Amazon-Managed-Service-for-Prometheus_64.svg",
+        "options": [
+            "AWS Application Discovery Service",
+            "Amazon Managed Service for Prometheus",
+            "AWS Cloud Control API",
+            "AWS Control Tower"
+        ]
+    },
+    {
+        "name": "Amazon Managed Streaming for Apache Kafka",
+        "image": "./asset/Arch_Amazon-Managed-Streaming-for-Apache-Kafka_64.svg",
+        "options": [
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS Application Discovery Service",
+            "Amazon Simple Storage Service Glacier",
+            "AWS Savings Plans"
+        ]
+    },
+    {
+        "name": "Amazon Managed Workflows for Apache Airflow",
+        "image": "./asset/Arch_Amazon-Managed-Workflows-for-Apache-Airflow_64.svg",
+        "options": [
+            "Amazon Forecast",
+            "Amazon Polly",
+            "Amazon Managed Workflows for Apache Airflow",
+            "AWS Systems Manager"
+        ]
+    },
+    {
+        "name": "Amazon MemoryDB",
+        "image": "./asset/Arch_Amazon-MemoryDB_64.svg",
+        "options": [
+            "Amazon EKS Distro",
+            "Amazon Managed Service for Prometheus",
+            "Amazon MemoryDB",
+            "Amazon Lookout for Vision"
+        ]
+    },
+    {
+        "name": "Amazon Monitron",
+        "image": "./asset/Arch_Amazon-Monitron_64.svg",
+        "options": [
+            "AWS Transit Gateway",
+            "Amazon Lookout for Metrics",
+            "Amazon Monitron",
+            "Amazon AppFlow"
+        ]
+    },
+    {
+        "name": "Amazon Neptune",
+        "image": "./asset/Arch_Amazon-Neptune_64.svg",
+        "options": [
+            "Amazon Kinesis Data Streams",
+            "AWS Panorama",
+            "Amazon Quantum Ledger Database",
+            "Amazon Neptune"
+        ]
+    },
+    {
+        "name": "Amazon Nova",
+        "image": "./asset/Arch_Amazon-Nova_64.svg",
+        "options": [
+            "Amazon Nova",
+            "AWS Cloud Development Kit",
+            "AWS HealthScribe",
+            "AWS Deadline Cloud"
+        ]
+    },
+    {
+        "name": "Amazon OpenSearch Service",
+        "image": "./asset/Arch_Amazon-OpenSearch-Service_64.svg",
+        "options": [
+            "AWS Glue DataBrew",
+            "AWS Elastic Load Balancing",
+            "Amazon OpenSearch Service",
+            "AWS Wavelength"
+        ]
+    },
+    {
+        "name": "Amazon Personalize",
+        "image": "./asset/Arch_Amazon-Personalize_64.svg",
+        "options": [
+            "Amazon Managed Workflows for Apache Airflow",
+            "Amazon Personalize",
+            "Amazon Transcribe",
+            "Amazon SageMaker Studio Lab"
+        ]
+    },
+    {
+        "name": "Amazon Pinpoint APIs",
+        "image": "./asset/Arch_Amazon-Pinpoint-APIs_64.svg",
+        "options": [
+            "Amazon Nova",
+            "Amazon Interactive Video Service",
+            "Amazon Pinpoint APIs",
+            "Amazon EventBridge"
+        ]
+    },
+    {
+        "name": "Amazon Pinpoint",
+        "image": "./asset/Arch_Amazon-Pinpoint_64.svg",
+        "options": [
+            "AWS Site to Site VPN",
+            "Amazon Pinpoint",
+            "AWS Elemental MediaConnect",
+            "Amazon Managed Streaming for Apache Kafka"
+        ]
+    },
+    {
+        "name": "Amazon Polly",
+        "image": "./asset/Arch_Amazon-Polly_64.svg",
+        "options": [
+            "Amazon Polly",
+            "AWS RoboMaker",
+            "Amazon SageMaker AI",
+            "AWS Elemental MediaLive"
+        ]
+    },
+    {
+        "name": "Amazon Q",
+        "image": "./asset/Arch_Amazon-Q_64.svg",
+        "options": [
+            "Amazon Q",
+            "AWS Cloud Map",
+            "Amazon WorkSpaces Family",
+            "Amazon ECS"
+        ]
+    },
+    {
+        "name": "Amazon Quantum Ledger Database",
+        "image": "./asset/Arch_Amazon-Quantum-Ledger-Database_64.svg",
+        "options": [
+            "Amazon RDS",
+            "Amazon Quantum Ledger Database",
+            "Amazon Forecast",
+            "Amazon Neptune"
+        ]
+    },
+    {
+        "name": "Amazon QuickSight",
+        "image": "./asset/Arch_Amazon-QuickSight_64.svg",
+        "options": [
+            "Amazon QuickSight",
+            "AWS DataSync",
+            "Amazon CodeWhisperer",
+            "Amazon DevOps Guru"
+        ]
+    },
+    {
+        "name": "Amazon RDS",
+        "image": "./asset/Arch_Amazon-RDS_64.svg",
+        "options": [
+            "Amazon ElastiCache",
+            "Amazon Personalize",
+            "Amazon EC2 Auto Scaling",
+            "Amazon RDS"
+        ]
+    },
+    {
+        "name": "Amazon Redshift",
+        "image": "./asset/Arch_Amazon-Redshift_64.svg",
+        "options": [
+            "Amazon Neptune",
+            "Amazon Lightsail for Research",
+            "Amazon Redshift",
+            "Amazon Quantum Ledger Database"
+        ]
+    },
+    {
+        "name": "Amazon Rekognition",
+        "image": "./asset/Arch_Amazon-Rekognition_64.svg",
+        "options": [
+            "Amazon Rekognition",
+            "Amazon Lookout for Metrics",
+            "Amazon DevOps Guru",
+            "Alexa For Business"
+        ]
+    },
+    {
+        "name": "Amazon Route 53",
+        "image": "./asset/Arch_Amazon-Route-53_64.svg",
+        "options": [
+            "Amazon Location Service",
+            "AWS PrivateLink",
+            "Amazon VPC",
+            "Amazon Route 53"
+        ]
+    },
+    {
+        "name": "Amazon S3 on Outposts",
+        "image": "./asset/Arch_Amazon-S3-on-Outposts_64.svg",
+        "options": [
+            "AWS Thinkbox Sequoia",
+            "Amazon FSx for Lustre",
+            "AWS Open 3D Engine",
+            "Amazon S3 on Outposts"
+        ]
+    },
+    {
+        "name": "Amazon SageMaker AI",
+        "image": "./asset/Arch_Amazon-SageMaker-AI_64.svg",
+        "options": [
+            "AWS DeepComposer",
+            "Amazon Comprehend",
+            "Amazon SageMaker AI",
+            "AWS Oracle Database at AWS"
+        ]
+    },
+    {
+        "name": "Amazon SageMaker Ground Truth",
+        "image": "./asset/Arch_Amazon-SageMaker-Ground-Truth_64.svg",
+        "options": [
+            "Amazon Forecast",
+            "AWS Backup",
+            "AWS Bottlerocket",
+            "Amazon SageMaker Ground Truth"
+        ]
+    },
+    {
+        "name": "Amazon SageMaker Studio Lab",
+        "image": "./asset/Arch_Amazon-SageMaker-Studio-Lab_64.svg",
+        "options": [
+            "Amazon Lookout for Metrics",
+            "Amazon SageMaker Studio Lab",
+            "Amazon Polly",
+            "AWS Fault Injection Service"
+        ]
+    },
+    {
+        "name": "Amazon SageMaker",
+        "image": "./asset/Arch_Amazon-SageMaker_64.svg",
+        "options": [
+            "AWS CloudShell",
+            "Amazon SageMaker",
+            "Amazon SageMaker Studio Lab",
+            "Amazon Transcribe"
+        ]
+    },
+    {
+        "name": "Amazon Security Lake",
+        "image": "./asset/Arch_Amazon-Security-Lake_64.svg",
+        "options": [
+            "AWS Security Incident Response",
+            "Amazon Security Lake",
+            "Amazon Cognito",
+            "Amazon Route 53"
+        ]
+    },
+    {
+        "name": "Amazon SES",
+        "image": "./asset/Arch_Amazon-Simple-Email-Service_64.svg",
+        "options": [
+            "Amazon SES",
+            "Amazon Pinpoint APIs",
+            "Amazon S3",
+            "Amazon Connect"
+        ]
+    },
+    {
+        "name": "Amazon SNS",
+        "image": "./asset/Arch_Amazon-Simple-Notification-Service_64.svg",
+        "options": [
+            "AWS Shield",
+            "Amazon Chime SDK",
+            "Amazon SNS",
+            "Amazon SQS"
+        ]
+    },
+    {
+        "name": "Amazon SQS",
+        "image": "./asset/Arch_Amazon-Simple-Queue-Service_64.svg",
+        "options": [
+            "Amazon SQS",
+            "Amazon Managed Grafana",
+            "Amazon SNS",
+            "Amazon Chime SDK"
+        ]
+    },
+    {
+        "name": "Amazon Simple Storage Service Glacier",
+        "image": "./asset/Arch_Amazon-Simple-Storage-Service-Glacier_64.svg",
+        "options": [
+            "Amazon Simple Storage Service Glacier",
+            "AWS Snowball Edge",
+            "Amazon EFS",
+            "AWS Elastic Fabric Adapter"
+        ]
+    },
+    {
+        "name": "Amazon S3",
+        "image": "./asset/Arch_Amazon-Simple-Storage-Service_64.svg",
+        "options": [
+            "AWS Snowball",
+            "AWS Chatbot",
+            "Amazon EFS",
+            "Amazon S3"
+        ]
+    },
+    {
+        "name": "Amazon Textract",
+        "image": "./asset/Arch_Amazon-Textract_64.svg",
+        "options": [
+            "Amazon Textract",
+            "Amazon SageMaker Studio Lab",
+            "AWS KMS",
+            "Amazon Comprehend Medical"
+        ]
+    },
+    {
+        "name": "Amazon Timestream",
+        "image": "./asset/Arch_Amazon-Timestream_64.svg",
+        "options": [
+            "AWS Outposts servers",
+            "AWS PyTorch on AWS",
+            "Amazon Timestream",
+            "Amazon DocumentDB"
+        ]
+    },
+    {
+        "name": "Amazon Transcribe",
+        "image": "./asset/Arch_Amazon-Transcribe_64.svg",
+        "options": [
+            "Amazon Transcribe",
+            "AWS DeepComposer",
+            "Amazon EKS Distro",
+            "AWS Deep Learning Containers"
+        ]
+    },
+    {
+        "name": "Amazon Translate",
+        "image": "./asset/Arch_Amazon-Translate_64.svg",
+        "options": [
+            "Amazon Translate",
+            "AWS App Mesh",
+            "Amazon S3",
+            "AWS Supply Chain"
+        ]
+    },
+    {
+        "name": "Amazon VPC Lattice",
+        "image": "./asset/Arch_Amazon-VPC-Lattice_64.svg",
+        "options": [
+            "AWS Step Functions",
+            "Amazon VPC Lattice",
+            "AWS Elastic Load Balancing",
+            "AWS Global Accelerator"
+        ]
+    },
+    {
+        "name": "Amazon Verified Permissions",
+        "image": "./asset/Arch_Amazon-Verified-Permissions_64.svg",
+        "options": [
+            "Amazon SageMaker Ground Truth",
+            "Amazon Verified Permissions",
+            "AWS Budgets",
+            "AWS Private Certificate Authority"
+        ]
+    },
+    {
+        "name": "Amazon VPC",
+        "image": "./asset/Arch_Amazon-Virtual-Private-Cloud_64.svg",
+        "options": [
+            "AWS Transit Gateway",
+            "AWS IoT Device Defender",
+            "Amazon VPC",
+            "Amazon Managed Streaming for Apache Kafka"
+        ]
+    },
+    {
+        "name": "Amazon WorkDocs SDK",
+        "image": "./asset/Arch_Amazon-WorkDocs-SDK_64.svg",
+        "options": [
+            "Amazon WorkDocs SDK",
+            "AWS CloudShell",
+            "AWS CodeArtifact",
+            "AWS Snowball"
+        ]
+    },
+    {
+        "name": "Amazon WorkDocs",
+        "image": "./asset/Arch_Amazon-WorkDocs_64.svg",
+        "options": [
+            "AWS Serverless Application Repository",
+            "AWS IoT ExpressLink",
+            "AWS Apache MXNet on AWS",
+            "Amazon WorkDocs"
+        ]
+    },
+    {
+        "name": "Amazon WorkMail",
+        "image": "./asset/Arch_Amazon-WorkMail_64.svg",
+        "options": [
+            "AWS AppSync",
+            "Amazon WorkMail",
+            "Amazon Fraud Detector",
+            "Amazon Augmented AI A2I"
+        ]
+    },
+    {
+        "name": "Amazon WorkSpaces Family",
+        "image": "./asset/Arch_Amazon-WorkSpaces-Family_64.svg",
+        "options": [
+            "Amazon Polly",
+            "Amazon Elastic Inference",
+            "Amazon WorkSpaces Family",
+            "Amazon EKS"
+        ]
+    },
+    {
+        "name": "AWS Apache MXNet on AWS",
+        "image": "./asset/Arch_Apache-MXNet-on-AWS_64.svg",
+        "options": [
+            "AWS Migration Hub",
+            "Amazon Lookout for Equipment",
+            "AWS Apache MXNet on AWS",
+            "AWS Elemental MediaTailor"
+        ]
+    },
+    {
+        "name": "AWS Bottlerocket",
+        "image": "./asset/Arch_Bottlerocket_64.svg",
+        "options": [
+            "AWS Bottlerocket",
+            "Amazon Forecast",
+            "Amazon EKS Anywhere",
+            "AWS Professional Services"
+        ]
+    },
+    {
+        "name": "AWS Elastic Fabric Adapter",
+        "image": "./asset/Arch_Elastic-Fabric-Adapter_64.svg",
+        "options": [
+            "AWS Signer",
+            "AWS Outposts family",
+            "Amazon Chime",
+            "AWS Elastic Fabric Adapter"
+        ]
+    },
+    {
+        "name": "AWS Elastic Load Balancing",
+        "image": "./asset/Arch_Elastic-Load-Balancing_64.svg",
+        "options": [
+            "AWS PrivateLink",
+            "AWS Elastic Load Balancing",
+            "Amazon EFS",
+            "AWS Direct Connect"
+        ]
+    },
+    {
+        "name": "AWS FreeRTOS",
+        "image": "./asset/Arch_FreeRTOS_64.svg",
+        "options": [
+            "AWS IoT TwinMaker",
+            "AWS Migration Hub",
+            "AWS FreeRTOS",
+            "AWS IoT ExpressLink"
+        ]
+    },
+    {
+        "name": "AWS NICE EnginFrame",
+        "image": "./asset/Arch_NICE-EnginFrame_64.svg",
+        "options": [
+            "Amazon Q",
+            "AWS NICE EnginFrame",
+            "Amazon CodeGuru",
+            "Amazon EKS Distro"
+        ]
+    },
+    {
+        "name": "AWS Open 3D Engine",
+        "image": "./asset/Arch_Open-3D-Engine_64.svg",
+        "options": [
+            "AWS Command Line Interface",
+            "Amazon FinSpace",
+            "AWS Open 3D Engine",
+            "Amazon Rekognition"
+        ]
+    },
+    {
+        "name": "AWS Oracle Database at AWS",
+        "image": "./asset/Arch_Oracle-Database-at-AWS_64.svg",
+        "options": [
+            "AWS KMS",
+            "AWS Apache MXNet on AWS",
+            "AWS Oracle Database at AWS",
+            "Amazon QuickSight"
+        ]
+    },
+    {
+        "name": "AWS PyTorch on AWS",
+        "image": "./asset/Arch_PyTorch-on-AWS_64.svg",
+        "options": [
+            "AWS Outposts rack",
+            "AWS Fault Injection Service",
+            "AWS PyTorch on AWS",
+            "AWS Open 3D Engine"
+        ]
+    },
+    {
+        "name": "AWS Red Hat OpenShift Service on AWS",
+        "image": "./asset/Arch_Red-Hat-OpenShift-Service-on-AWS_64.svg",
+        "options": [
+            "AWS Elemental MediaConvert",
+            "AWS Red Hat OpenShift Service on AWS",
+            "Amazon Q",
+            "Amazon Pinpoint APIs"
+        ]
+    },
+    {
+        "name": "AWS Reserved Instance Reporting",
+        "image": "./asset/Arch_Reserved-Instance-Reporting_64.svg",
+        "options": [
+            "AWS Wavelength",
+            "Amazon DynamoDB",
+            "AWS Reserved Instance Reporting",
+            "AWS AppSync"
+        ]
+    },
+    {
+        "name": "AWS Savings Plans",
+        "image": "./asset/Arch_Savings-Plans_64.svg",
+        "options": [
+            "AWS Auto Scaling",
+            "Amazon AppStream 2",
+            "Amazon ECS",
+            "AWS Savings Plans"
+        ]
+    },
+    {
+        "name": "AWS TensorFlow on AWS",
+        "image": "./asset/Arch_TensorFlow-on-AWS_64.svg",
+        "options": [
+            "AWS Apache MXNet on AWS",
+            "AWS Backup",
+            "AWS TensorFlow on AWS",
+            "AWS Snowball Edge"
+        ]
+    }
+]

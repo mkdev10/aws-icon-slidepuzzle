@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS アイコン スライドパズル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AWS アイコン スライドパズル</h1>
+        
+        <!-- ゲーム開始画面 -->
+        <div id="start-screen" class="screen">
+            <h2>ゲームの遊び方</h2>
+            <p>1. AWSサービスアイコンのスライドパズルを完成させよう</p>
+            <p>2. 完成したらサービス名を4択から選ぼう</p>
+            <p>3. 40種類のAWSサービスからランダムに出題！</p>
+            <p>4. 速さを競おう！</p>
+            <button id="start-btn" class="btn">ゲーム開始</button>
+        </div>
+
+        <!-- パズル画面 -->
+        <div id="puzzle-screen" class="screen hidden">
+            <div class="game-info">
+                <div class="timer">時間: <span id="timer">00:00</span></div>
+                <div class="moves">移動回数: <span id="moves">0</span></div>
+            </div>
+            
+            <div id="puzzle-container">
+                <div id="puzzle-grid"></div>
+            </div>
+            
+            <div class="button-group">
+                <button id="shuffle-btn" class="btn">シャッフル</button>
+                <button id="give-up-btn" class="btn btn-secondary">ギブアップ</button>
+            </div>
+        </div>
+
+        <!-- クイズ画面 -->
+        <div id="quiz-screen" class="screen hidden">
+            <h2 id="quiz-title">このAWSサービスは何でしょう？</h2>
+            <div id="completed-image"></div>
+            <div id="quiz-options"></div>
+            <div id="quiz-result"></div>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" class="screen hidden">
+            <h2>ゲーム完了！</h2>
+            <div id="final-time"></div>
+            <div id="final-moves"></div>
+            <button id="play-again-btn" class="btn">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

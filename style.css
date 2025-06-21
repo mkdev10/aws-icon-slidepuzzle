@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #232F3E, #FF9900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #232F3E;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #232F3E;
+    margin-bottom: 15px;
+}
+
+.screen {
+    display: block;
+}
+
+.screen.hidden {
+    display: none;
+}
+
+.btn {
+    background: #FF9900;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e88a00;
+}
+
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* ゲーム情報 */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #232F3E;
+}
+
+/* パズルグリッド */
+#puzzle-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 2px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.puzzle-piece {
+    background-size: 360px 360px;
+    background-repeat: no-repeat;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #666;
+    background-color: #f8f9fa;
+}
+
+.puzzle-piece:hover {
+    border-color: #FF9900;
+    transform: scale(1.05);
+}
+
+.puzzle-piece.empty {
+    background: #f0f0f0;
+    cursor: default;
+}
+
+.puzzle-piece.empty:hover {
+    border-color: #fff;
+    transform: none;
+}
+
+/* クイズ部分 */
+#completed-image {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    border: 3px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+#quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.quiz-option {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quiz-option:hover {
+    background: #e9ecef;
+    border-color: #FF9900;
+}
+
+.quiz-option.correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.quiz-option.incorrect {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+#quiz-result {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quiz-result.correct {
+    color: #28a745;
+}
+
+.quiz-result.incorrect {
+    color: #dc3545;
+}
+
+/* 結果画面 */
+#final-time, #final-moves {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #232F3E;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    #puzzle-grid {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+    
+    .puzzle-piece {
+        background-size: 240px 240px;
+    }
+    
+    #completed-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #quiz-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
