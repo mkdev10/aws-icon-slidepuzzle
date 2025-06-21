@@ -1,6 +1,88 @@
 // AWSサービスデータ（JSONファイルから読み込み）
 let awsServices = [];
 
+// プレビューアイコン関連の変数
+let previewInterval = null;
+let currentPreviewIndex = 0;
+let currentIconIndex = 0; // 現在切り替え中のアイコンのインデックス
+
+// プレビューアイコンを初期化する関数
+function initPreviewIcons() {
+    if (awsServices.length === 0) return;
+    
+    // 最初の3つのアイコンを表示
+    initializeFirstIcons();
+    
+    // 2秒間隔で一つずつアイコンを切り替え
+    previewInterval = setInterval(() => {
+        updateSinglePreviewIcon();
+    }, 2000);
+}
+
+// 最初の3つのアイコンを初期化
+function initializeFirstIcons() {
+    const icons = [
+        document.getElementById('preview-icon-1'),
+        document.getElementById('preview-icon-2'),
+        document.getElementById('preview-icon-3')
+    ];
+    
+    // 最初の3つのアイコンを設定
+    for (let i = 0; i < 3; i++) {
+        const service = awsServices[i];
+        icons[i].src = service.image;
+        icons[i].alt = service.name;
+        
+        // 少しずつ遅延させて表示
+        setTimeout(() => {
+            icons[i].classList.add('fade-in');
+        }, i * 200);
+    }
+    
+    currentPreviewIndex = 3; // 次に表示するサービスのインデックス
+    currentIconIndex = 0; // 次に切り替えるアイコンのインデックス
+}
+
+// 一つのプレビューアイコンを更新する関数
+function updateSinglePreviewIcon() {
+    const icons = [
+        document.getElementById('preview-icon-1'),
+        document.getElementById('preview-icon-2'),
+        document.getElementById('preview-icon-3')
+    ];
+    
+    const targetIcon = icons[currentIconIndex];
+    
+    // 回転しながらフェードアウト
+    targetIcon.classList.add('rotate-out');
+    targetIcon.classList.remove('rotate-in', 'fade-in');
+    
+    setTimeout(() => {
+        // 新しいアイコンを設定
+        const service = awsServices[currentPreviewIndex % awsServices.length];
+        targetIcon.src = service.image;
+        targetIcon.alt = service.name;
+        
+        // 回転しながらフェードイン
+        setTimeout(() => {
+            targetIcon.classList.remove('rotate-out');
+            targetIcon.classList.add('rotate-in', 'fade-in');
+        }, 50);
+        
+        // 次のインデックスを更新
+        currentPreviewIndex = (currentPreviewIndex + 1) % awsServices.length;
+        currentIconIndex = (currentIconIndex + 1) % 3;
+    }, 300);
+}
+
+// プレビューアイコンを停止する関数
+function stopPreviewIcons() {
+    if (previewInterval) {
+        clearInterval(previewInterval);
+        previewInterval = null;
+    }
+}
+
 // AWSサービスデータを読み込む関数
 async function loadAwsServices() {
     try {
@@ -15,6 +97,9 @@ async function loadAwsServices() {
         // 最初の数個のサービス名をデバッグ出力
         console.log('読み込まれたサービス例:', awsServices.slice(0, 5).map(s => s.name));
         
+        // プレビューアイコンを開始
+        initPreviewIcons();
+        
     } catch (error) {
         console.error('AWSサービスデータの読み込みに失敗しました:', error);
         // フォールバック: 最小限のサービスデータ
@@ -26,6 +111,9 @@ async function loadAwsServices() {
             }
         ];
         console.log('フォールバックデータを使用します');
+        
+        // プレビューアイコンを開始
+        initPreviewIcons();
     }
 }
 
@@ -61,17 +149,44 @@ const elements = {
     quizOptions: document.getElementById('quiz-options'),
     quizResult: document.getElementById('quiz-result'),
     finalTime: document.getElementById('final-time'),
-    finalMoves: document.getElementById('final-moves')
+    finalMoves: document.getElementById('final-moves'),
+    giveUpModal: document.getElementById('give-up-modal'),
+    giveUpCancel: document.getElementById('give-up-cancel'),
+    giveUpConfirm: document.getElementById('give-up-confirm')
 };
 
 // イベントリスナー
 elements.startBtn.addEventListener('click', startGame);
 elements.shuffleBtn.addEventListener('click', shufflePuzzle);
-elements.giveUpBtn.addEventListener('click', giveUp);
-elements.playAgainBtn.addEventListener('click', startGame); // resetGameではなくstartGameを呼び出す
+elements.giveUpBtn.addEventListener('click', showGiveUpModal);
+elements.playAgainBtn.addEventListener('click', () => {
+    // スタート画面に戻る
+    showScreen('start');
+    // プレビューアイコンを再開
+    initPreviewIcons();
+});
+elements.giveUpCancel.addEventListener('click', hideGiveUpModal);
+elements.giveUpConfirm.addEventListener('click', confirmGiveUp);
+
+// モーダルの背景をクリックしたときに閉じる
+elements.giveUpModal.addEventListener('click', (e) => {
+    if (e.target === elements.giveUpModal) {
+        hideGiveUpModal();
+    }
+});
+
+// ESCキーでモーダルを閉じる
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !elements.giveUpModal.classList.contains('hidden')) {
+        hideGiveUpModal();
+    }
+});
 
 // ゲーム開始
 async function startGame() {
+    // プレビューアイコンを停止
+    stopPreviewIcons();
+    
     // AWSサービスデータが読み込まれていない場合は読み込む
     if (awsServices.length === 0) {
         await loadAwsServices();
@@ -108,6 +223,14 @@ async function startGame() {
 function showScreen(screenName) {
     Object.values(screens).forEach(screen => screen.classList.add('hidden'));
     screens[screenName].classList.remove('hidden');
+    
+    // プレビューアイコンの表示制御
+    const previewIcons = document.getElementById('preview-icons');
+    if (screenName === 'start') {
+        previewIcons.classList.remove('hidden');
+    } else {
+        previewIcons.classList.add('hidden');
+    }
 }
 
 // パズル初期化
@@ -189,27 +312,35 @@ function completePuzzle() {
     }, 1000);
 }
 
-// ギブアップ機能
-function giveUp() {
+// ギブアップモーダル表示
+function showGiveUpModal() {
     if (!isGameActive) return;
+    elements.giveUpModal.classList.remove('hidden');
+}
+
+// ギブアップモーダル非表示
+function hideGiveUpModal() {
+    elements.giveUpModal.classList.add('hidden');
+}
+
+// ギブアップ確定
+function confirmGiveUp() {
+    hideGiveUpModal();
     
-    // 確認ダイアログを表示
-    if (confirm('ギブアップしますか？\n正解のパズルを表示してクイズに進みます。')) {
-        // パズルを完成状態にする
-        puzzleGrid = Array.from({length: 9}, (_, i) => i);
-        emptyPosition = 8;
-        isGameActive = false;
-        isGaveUp = true;
-        
-        // パズルを描画
-        renderPuzzle();
-        
-        // 少し待ってからクイズに進む
-        setTimeout(() => {
-            stopTimer();
-            showQuiz();
-        }, 1000);
-    }
+    // パズルを完成状態にする
+    puzzleGrid = Array.from({length: 9}, (_, i) => i);
+    emptyPosition = 8;
+    isGameActive = false;
+    isGaveUp = true;
+    
+    // パズルを描画
+    renderPuzzle();
+    
+    // 少し待ってからクイズに進む
+    setTimeout(() => {
+        stopTimer();
+        showQuiz();
+    }, 1000);
 }
 
 // クイズ表示

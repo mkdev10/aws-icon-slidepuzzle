@@ -29,6 +29,61 @@ h1 {
     font-size: 2em;
 }
 
+/* プレビューアイコンのスタイル */
+.preview-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 30px 0;
+    height: 80px;
+}
+
+/* プレビューアイコンを非表示にするクラス */
+.preview-icons.hidden {
+    display: none;
+}
+
+.preview-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.preview-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.preview-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    opacity: 0;
+    transform: rotateY(0deg);
+    transition: all 0.6s ease-in-out;
+}
+
+.preview-icon img.fade-in {
+    opacity: 1;
+}
+
+.preview-icon img.rotate-out {
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+
+.preview-icon img.rotate-in {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
 h2 {
     color: #232F3E;
     margin-bottom: 15px;
@@ -201,10 +256,106 @@ h2 {
     color: #232F3E;
 }
 
+/* モーダルダイアログ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 20px 20px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    color: #232F3E;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.modal-body {
+    padding: 20px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    padding: 10px 20px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
+    }
+    
+    .preview-icons {
+        gap: 15px;
+        margin: 15px 0 25px 0;
+        height: 60px;
+    }
+    
+    .preview-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .preview-icon img {
+        width: 36px;
+        height: 36px;
+        transform: rotateY(0deg);
+        transition: all 0.6s ease-in-out;
     }
     
     #puzzle-grid {

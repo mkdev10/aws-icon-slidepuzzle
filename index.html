@@ -10,6 +10,19 @@
     <div class="container">
         <h1>AWS アイコン スライドパズル</h1>
         
+        <!-- プレビューアイコン表示エリア -->
+        <div id="preview-icons" class="preview-icons hidden">
+            <div class="preview-icon">
+                <img id="preview-icon-1" src="" alt="AWS Service Icon">
+            </div>
+            <div class="preview-icon">
+                <img id="preview-icon-2" src="" alt="AWS Service Icon">
+            </div>
+            <div class="preview-icon">
+                <img id="preview-icon-3" src="" alt="AWS Service Icon">
+            </div>
+        </div>
+        
         <!-- ゲーム開始画面 -->
         <div id="start-screen" class="screen">
             <h2>ゲームの遊び方</h2>
@@ -51,6 +64,23 @@
             <div id="final-time"></div>
             <div id="final-moves"></div>
             <button id="play-again-btn" class="btn">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <!-- ギブアップ確認モーダル -->
+    <div id="give-up-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>ギブアップしますか？</h3>
+            </div>
+            <div class="modal-body">
+                <p>正解のパズルを表示してクイズに進みます。</p>
+                <p>現在の記録は保持されますが、ギブアップとして記録されます。</p>
+            </div>
+            <div class="modal-footer">
+                <button id="give-up-cancel" class="btn btn-secondary">キャンセル</button>
+                <button id="give-up-confirm" class="btn btn-danger">ギブアップする</button>
+            </div>
         </div>
     </div>
 
