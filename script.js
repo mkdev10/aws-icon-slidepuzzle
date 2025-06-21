@@ -362,10 +362,6 @@ async function startGame() {
     lastServiceIndex = randomIndex;
     currentService = awsServices[randomIndex];
     
-    // デバッグ情報をコンソールに出力
-    console.log(`選択されたサービス: ${currentService.name} (インデックス: ${randomIndex}/${awsServices.length - 1})`);
-    console.log(`利用可能なサービス数: ${awsServices.length}`);
-    
     showScreen('puzzle');
     initializePuzzle();
     shufflePuzzle();
@@ -374,6 +370,96 @@ async function startGame() {
     updateMoves();
     isGameActive = true;
     isGaveUp = false;
+}
+
+// ローディング状態を表示
+function showLoadingState() {
+    const puzzleContainer = document.getElementById('puzzle-container');
+    puzzleContainer.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 400px;">
+            <div style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #FF9900; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px;"></div>
+            <div style="color: #666; font-size: 16px;">ゲームを準備中...</div>
+        </div>
+    `;
+    
+    // スピンアニメーションのCSSを追加
+    if (!document.getElementById('loading-styles')) {
+        const style = document.createElement('style');
+        style.id = 'loading-styles';
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+// ローディング状態を解除
+function hideLoadingState() {
+    const puzzleContainer = document.getElementById('puzzle-container');
+    puzzleContainer.innerHTML = '<div id="puzzle-grid"></div>';
+    // elements.puzzleGridを再取得
+    elements.puzzleGrid = document.getElementById('puzzle-grid');
+}
+
+// ゲーム用画像を事前読み込み
+function preloadGameImages() {
+    return new Promise((resolve, reject) => {
+        if (!currentService || !currentService.image) {
+            reject(new Error('サービス情報が不正です'));
+            return;
+        }
+        
+        const img = new Image();
+        let loadTimeout;
+        
+        // タイムアウト設定（10秒）
+        loadTimeout = setTimeout(() => {
+            reject(new Error('画像の読み込みがタイムアウトしました'));
+        }, 10000);
+        
+        img.onload = function() {
+            clearTimeout(loadTimeout);
+            resolve();
+        };
+        
+        img.onerror = function() {
+            clearTimeout(loadTimeout);
+            // エラーの場合でもゲームを続行（フォールバック表示）
+            console.warn('画像の事前読み込みに失敗しましたが、ゲームを続行します');
+            resolve();
+        };
+        
+        // Safari対応：SVGをData URLとして読み込み
+        if (currentService.image.endsWith('.svg')) {
+            fetch(currentService.image)
+                .then(response => response.text())
+                .then(svgText => {
+                    if (!svgText.includes('width=') || !svgText.includes('height=')) {
+                        svgText = svgText.replace('<svg', '<svg width="80" height="80"');
+                    }
+                    const blob = new Blob([svgText], { type: 'image/svg+xml' });
+                    const url = URL.createObjectURL(blob);
+                    img.src = url;
+                    
+                    // メモリリークを防ぐため、読み込み後にURLを解放
+                    img.onload = function() {
+                        URL.revokeObjectURL(url);
+                        clearTimeout(loadTimeout);
+                        resolve();
+                    };
+                })
+                .catch(error => {
+                    clearTimeout(loadTimeout);
+                    console.warn('SVG事前読み込みエラー、フォールバックで続行');
+                    resolve();
+                });
+        } else {
+            img.src = currentService.image;
+        }
+    });
 }
 
 // 画面切り替え
@@ -462,7 +548,7 @@ function updateSinglePiece(piece, position) {
         }
         
         // 画像の位置を更新
-        img.alt = currentService.name;
+        img.alt = 'AWS Service Icon'; // サービス名を隠す
         img.style.width = (pieceSize * 3) + 'px';
         img.style.height = (pieceSize * 3) + 'px';
         img.style.objectFit = 'contain';
@@ -496,16 +582,16 @@ function updateSinglePiece(piece, position) {
                         };
                     })
                     .catch(error => {
-                        console.warn('SVG fetch エラー:', error);
+                        console.warn('SVG fetch エラー');
                         img.src = currentService.image; // フォールバック
                     });
             } else {
                 img.src = currentService.image;
             }
             
-            // エラーハンドリング
+            // エラーハンドリング（サービス名を表示しない）
             img.onerror = function() {
-                console.warn('SVG読み込みエラー:', currentService.image);
+                console.warn('画像読み込みエラー');
                 piece.innerHTML = '';
                 piece.style.backgroundColor = '#e9ecef';
                 piece.style.display = 'flex';
@@ -513,7 +599,7 @@ function updateSinglePiece(piece, position) {
                 piece.style.justifyContent = 'center';
                 piece.style.fontSize = isMobile ? '10px' : '12px';
                 piece.style.color = '#666';
-                piece.textContent = currentService.name.substring(0, 3);
+                piece.textContent = '?'; // サービス名の代わりに「?」を表示
             };
             
             img.onload = function() {
@@ -639,7 +725,7 @@ function showQuiz() {
     // 完成画像を表示
     elements.completedImage.innerHTML = '';
     const completedImg = document.createElement('img');
-    completedImg.alt = currentService.name;
+    completedImg.alt = 'AWS Service Icon'; // サービス名を隠す
     
     // Safari対応：SVGをData URLとして読み込み
     if (currentService.image.endsWith('.svg')) {
@@ -658,7 +744,7 @@ function showQuiz() {
                 };
             })
             .catch(error => {
-                console.warn('完成画像SVG fetch エラー:', error);
+                console.warn('完成画像SVG fetch エラー');
                 completedImg.src = currentService.image;
             });
     } else {
@@ -666,9 +752,9 @@ function showQuiz() {
     }
     
     completedImg.onerror = function() {
-        console.warn('完成画像の読み込みエラー:', currentService.image);
+        console.warn('完成画像の読み込みエラー');
         elements.completedImage.style.backgroundColor = '#e9ecef';
-        elements.completedImage.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">${currentService.name}</div>`;
+        elements.completedImage.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">?</div>`;
     };
     elements.completedImage.appendChild(completedImg);
     
@@ -745,7 +831,7 @@ function showResult() {
                     };
                 })
                 .catch(error => {
-                    console.warn('サービスアイコンSVG fetch エラー:', error);
+                    console.warn('サービスアイコンSVG fetch エラー');
                     serviceImg.src = currentService.image;
                 });
         } else {
@@ -753,9 +839,9 @@ function showResult() {
         }
         
         serviceImg.onerror = function() {
-            console.warn('サービスアイコンの読み込みエラー:', currentService.image);
+            console.warn('サービスアイコンの読み込みエラー');
             completedServiceIcon.style.backgroundColor = '#e9ecef';
-            completedServiceIcon.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">${currentService.name.substring(0, 5)}</div>`;
+            completedServiceIcon.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px;">?</div>`;
         };
         completedServiceIcon.appendChild(serviceImg);
         completedServiceName.textContent = currentService.name;
